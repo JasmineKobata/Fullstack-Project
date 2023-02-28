@@ -1,0 +1,48 @@
+.signup {
+    text-align: center;
+    margin: auto;
+    padding-top: 50px;
+    width: 525px;
+    height: 603px;
+    border-radius: 15px;
+    background-color: white;
+}
+
+.logo {
+    width: 65px;
+}
+
+input:focus ~ #firstname,
+input:focus ~ #lastname {
+    color: #2c5601;
+}
+
+input:focus ~ #firstname ,
+input:not(:focus):valid ~ #firstname {
+    width: 73px;
+}
+
+input:focus ~ #lastname ,
+input:not(:focus):valid ~ #lastname {
+    width: 73px;
+}
+
+#firstname {
+    width: 99px;
+    margin-left: 44px;
+}
+
+#lastname {
+    width: 98px;
+    margin-left: 44px;
+}
+
+.linkLogin {
+    color: #2b3820;
+    font: 16px Manrope;
+}
+
+.linkLogin a {
+    color: #2b3820;
+    font-weight: 600;
+}

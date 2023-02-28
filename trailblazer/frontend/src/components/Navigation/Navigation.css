@@ -1,0 +1,24 @@
+.navButton {
+    width: 75px;
+    height: 30px;
+    border-radius: 30px;
+    border: 1px solid #efefec;
+    background-color: #efefec;
+    color: #2b3820;
+    font: 13px Manrope;
+    font-weight: 600;
+}
+
+.navTable {
+    font: 13px Manrope;
+    font-weight: 600;
+}
+
+a {
+    color: #2b3820;
+    text-decoration: none;
+}
+
+.navTable li {
+    display: inline-block;
+}

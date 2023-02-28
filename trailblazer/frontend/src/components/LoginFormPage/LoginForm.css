@@ -1,0 +1,125 @@
+@font-face {
+    font-family: "Manrope";
+    src: url("../../resources/Manrope/Manrope-VariableFont_wght.ttf");
+}
+
+form {
+    background-image: url('../../resources/background.jpeg');
+    background-size: cover;
+    background-position: center;
+    padding-top: 50px;
+    height: 800px;
+}
+
+.login {
+    text-align: center;
+    margin: auto;
+    padding-top: 50px;
+    width: 525px;
+    height: 400px;
+    border-radius: 15px;
+    background-color: white;
+}
+
+h2 {
+    font: 30px Manrope;
+    font-weight: 500;
+    color: #2b3820;
+}
+
+label {
+    padding-top: 10px;
+    color: #656e5e;
+    font: 16px Manrope;
+}
+
+input {
+    width: 437px;
+    height: 45px;
+    border-radius: 8px;
+    border: 1px solid #c2c2b8;
+}
+
+button {
+    width: 450px;
+    height: 50px;
+    border-radius: 30px;
+    border: 1px solid #2c5601;
+    background-color: #2c5601;
+    color: white;
+    font: 16px Manrope;
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="password"] {
+    color: #2b3820;
+    font: 16px Manrope;
+    padding-left: 15px;
+}
+
+input:focus {
+    outline-color: #2c5601;
+}
+
+input:focus ~ .prelabel ,
+input:not(:focus):valid ~ .prelabel {
+    height: 12px;
+    margin-top: -58px;
+    font: 12px Manrope;
+}
+
+input:focus ~ #email,
+input:focus ~ #password {
+    color: #2c5601;
+}
+
+input:focus ~ #email ,
+input:not(:focus):valid ~ #email {
+    width: 90px;
+    margin-left: 44px;
+}
+
+input:focus ~ #password ,
+input:not(:focus):valid ~ #password {
+    width: 67px;
+    margin-left: 44px;
+}
+
+.prelabel {
+    position: absolute;
+    pointer-events: none;
+    height: 20px;
+    margin-top: -35px;
+    transition: 0.2s ease all;
+    background-color: white;
+}
+
+#email {
+    width: 125px;
+    margin-left: 40px;
+}
+
+#password {
+    width: 93px;
+    margin-left: 40px;
+}
+
+input:hover {
+    border: 1px solid #2c5601;
+}
+
+button:hover {
+    border: 1px solid #2c5601;
+    background-color: #2b3820;
+}
+
+.link {
+    color: #656e5e;
+    font: 16px Manrope;
+}
+
+.link a {
+    color: #2b3820;
+    font-weight: 600;
+}
