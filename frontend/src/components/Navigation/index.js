@@ -36,12 +36,12 @@ export default function Navigation() {
         <>
             <ul className='navTable'>
                 <li>
-                    <NavLink to="/">Home</NavLink><br></br>
+                    <NavLink className="home" to="/">.</NavLink><br></br>
                 </li>
-                <li>
-                    <NavLink to="/explore">Explore</NavLink>
+                <li  className="explore">
+                    <NavLink  className="exploreLink" to="/explore">Explore</NavLink>
                 </li>
-                <li>
+                <li className='button'>
                     <button className="navButton" onClick={handleButton}>{buttonType}</button>
                 </li>
             </ul>

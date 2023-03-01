@@ -1,3 +1,21 @@
+.home {
+    background-image: url('../../resources/Trailblazer.png');
+    background-size: cover;
+    background-position: center;
+    width: 134px;
+    line-height: 30px;
+    margin-left: -25px;
+    vertical-align: text-bottom;
+}
+
+.exploreLink {
+    background-size: cover;
+    background-position: center;
+    width: 134px;
+    line-height: 36px;
+    text-align: center;
+}
+
 .navButton {
     width: 75px;
     height: 30px;
@@ -10,15 +28,26 @@
 }
 
 .navTable {
+    list-style-type: none;
     font: 13px Manrope;
     font-weight: 600;
 }
 
-a {
+.navTable a {
     color: #2b3820;
     text-decoration: none;
 }
 
+.navTable .home {
+    color: white;
+}
+
 .navTable li {
-    display: inline-block;
+    display: inline-flex;
+}
+
+.navTable li:last-child {
+    float: right;
+    padding-right: 25px;
+    padding-top: 2px;
 }
