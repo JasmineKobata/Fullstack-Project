@@ -3,7 +3,8 @@ import LoginFormPage from "./components/LoginFormPage";
 import SignupFormPage from "./components/SignupFormPage";
 import HomePage from "./components/HomePage";
 import ExplorePage from "./components/ExplorePage"
-import TrailPage from "./components/TrailShow";
+import TrailShow from "./components/TrailShow";
+import ParkShow from "./components/ParkShow";
 
 function App() {
   return (
@@ -18,7 +19,10 @@ function App() {
         <ExplorePage />
       </Route>
       <Route exact path="/trails/:trailId">
-        <TrailPage />
+        <TrailShow />
+      </Route>
+      <Route exact path="/parks/:parkId">
+        <ParkShow />
       </Route>
       <Route exact path="/">
         <HomePage />

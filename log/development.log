@@ -58512,3 +58512,2024 @@ Processing by Api::ParksController#show as JSON
 Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 1541)
 
 
+Started GET "/explore" for 127.0.0.1 at 2023-03-02 13:20:18 -0800
+Started GET "/api/session" for 127.0.0.1 at 2023-03-02 13:20:18 -0800
+Processing by StaticPagesController#frontend_index as */*
+Processing by Api::SessionsController#show as JSON
+  Parameters: {"path"=>"explore"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 7.5ms | Allocations: 1868)
+Completed 200 OK in 9ms (Views: 8.4ms | Allocations: 2557)
+
+
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+Completed 200 OK in 108ms (Views: 0.1ms | ActiveRecord: 34.9ms | Allocations: 7111)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:20:19 -0800
+Started GET "/api/trails" for 127.0.0.1 at 2023-03-02 13:20:19 -0800
+Processing by Api::TrailsController#index as JSON
+  Rendering api/trails/index.json.jbuilder
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTrail Load (29.7ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ app/views/api/trails/index.json.jbuilder:1
+  Rendered api/trails/index.json.jbuilder (Duration: 44.9ms | Allocations: 9509)
+  [1m[36mPark Load (0.3ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+Completed 200 OK in 49ms (Views: 17.3ms | ActiveRecord: 29.7ms | Allocations: 12287)
+
+
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 274)
+Completed 200 OK in 47ms (Views: 1.0ms | ActiveRecord: 5.7ms | Allocations: 12596)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:20:19 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 212)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.2ms | Allocations: 1698)
+
+
+Started GET "/api/trails/1" for 127.0.0.1 at 2023-03-02 13:20:20 -0800
+Processing by Api::TrailsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTrail Load (0.5ms)[0m  [1m[34mSELECT "trails".* FROM "trails" WHERE "trails"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/trails_controller.rb:8:in `show'
+  Rendering api/trails/show.json.jbuilder
+  Rendered api/trails/show.json.jbuilder (Duration: 0.6ms | Allocations: 307)
+Completed 200 OK in 7ms (Views: 1.2ms | ActiveRecord: 0.5ms | Allocations: 2593)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-02 13:20:21 -0800
+Started GET "/trails/1" for 127.0.0.1 at 2023-03-02 13:20:21 -0800
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 1310)
+
+
+Processing by StaticPagesController#frontend_index as */*
+  Parameters: {"path"=>"trails/1"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.0ms | Allocations: 7)
+Completed 200 OK in 0ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 300)
+
+
+Started GET "/api/trails/1" for 127.0.0.1 at 2023-03-02 13:20:21 -0800
+Processing by Api::TrailsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTrail Load (0.3ms)[0m  [1m[34mSELECT "trails".* FROM "trails" WHERE "trails"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/trails_controller.rb:8:in `show'
+  Rendering api/trails/show.json.jbuilder
+  Rendered api/trails/show.json.jbuilder (Duration: 0.9ms | Allocations: 303)
+Completed 200 OK in 2ms (Views: 1.2ms | ActiveRecord: 0.3ms | Allocations: 1627)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:20:22 -0800
+Started GET "/api/trails" for 127.0.0.1 at 2023-03-02 13:20:22 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+Processing by Api::TrailsController#index as JSON
+  [1m[36mPark Load (0.4ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/trails/index.json.jbuilder
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.5ms | Allocations: 210)
+Completed 200 OK in 32ms (Views: 1.7ms | ActiveRecord: 0.4ms | Allocations: 2447)
+
+
+  [1m[36mTrail Load (1.7ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ app/views/api/trails/index.json.jbuilder:1
+  Rendered api/trails/index.json.jbuilder (Duration: 4.9ms | Allocations: 1756)
+Completed 200 OK in 18ms (Views: 14.1ms | ActiveRecord: 1.7ms | Allocations: 3127)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:20:22 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.6ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.3ms | Allocations: 210)
+Completed 200 OK in 4ms (Views: 0.6ms | ActiveRecord: 0.6ms | Allocations: 1558)
+
+
+Started GET "/explore" for 127.0.0.1 at 2023-03-02 13:20:23 -0800
+Started GET "/api/session" for 127.0.0.1 at 2023-03-02 13:20:23 -0800
+Processing by StaticPagesController#frontend_index as */*
+  Parameters: {"path"=>"explore"}
+Processing by Api::SessionsController#show as JSON
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 1024)
+
+
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 1633)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:20:23 -0800
+Started GET "/api/trails" for 127.0.0.1 at 2023-03-02 13:20:23 -0800
+Processing by Api::ParksController#show as JSON
+Processing by Api::TrailsController#index as JSON
+  Rendering api/trails/index.json.jbuilder
+  Parameters: {"id"=>"1"}
+  [1m[36mTrail Load (0.3ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ app/views/api/trails/index.json.jbuilder:1
+  [1m[36mPark Load (0.3ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered api/trails/index.json.jbuilder (Duration: 1.4ms | Allocations: 1809)
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms | Allocations: 3017)
+
+
+  Rendered api/parks/show.json.jbuilder (Duration: 0.1ms | Allocations: 210)
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 3001)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:20:23 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.3ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.3ms | Allocations: 210)
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 1542)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-02 13:21:08 -0800
+Started GET "/explore" for 127.0.0.1 at 2023-03-02 13:21:08 -0800
+Processing by StaticPagesController#frontend_index as */*
+  Parameters: {"path"=>"explore"}
+  Rendering public/index.html
+Processing by Api::SessionsController#show as JSON
+  Rendered public/index.html (Duration: 2.7ms | Allocations: 2549)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 4073)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+Completed 200 OK in 27ms (Views: 0.1ms | ActiveRecord: 23.3ms | Allocations: 3943)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:21:08 -0800
+Started GET "/api/trails" for 127.0.0.1 at 2023-03-02 13:21:08 -0800
+Processing by Api::TrailsController#index as JSON
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  Rendering api/trails/index.json.jbuilder
+  [1m[36mTrail Load (0.3ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ app/views/api/trails/index.json.jbuilder:1
+  [1m[36mPark Load (0.1ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendered api/trails/index.json.jbuilder (Duration: 32.0ms | Allocations: 8325)
+Completed 200 OK in 34ms (Views: 7.1ms | ActiveRecord: 26.2ms | Allocations: 10926)
+
+
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 1.0ms | Allocations: 236)
+Completed 200 OK in 34ms (Views: 5.1ms | ActiveRecord: 24.9ms | Allocations: 10164)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:21:08 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 1687)
+
+
+Started GET "/api/trails/1" for 127.0.0.1 at 2023-03-02 13:21:10 -0800
+Processing by Api::TrailsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTrail Load (0.3ms)[0m  [1m[34mSELECT "trails".* FROM "trails" WHERE "trails"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/trails_controller.rb:8:in `show'
+  Rendering api/trails/show.json.jbuilder
+  Rendered api/trails/show.json.jbuilder (Duration: 0.6ms | Allocations: 305)
+Completed 200 OK in 6ms (Views: 1.2ms | ActiveRecord: 0.3ms | Allocations: 2550)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-02 13:21:11 -0800
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 1222)
+
+
+Started GET "/trails/1" for 127.0.0.1 at 2023-03-02 13:21:11 -0800
+Processing by StaticPagesController#frontend_index as */*
+  Parameters: {"path"=>"trails/1"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.0ms | Allocations: 7)
+Completed 200 OK in 0ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 296)
+
+
+Started GET "/api/trails/1" for 127.0.0.1 at 2023-03-02 13:21:11 -0800
+Processing by Api::TrailsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTrail Load (0.3ms)[0m  [1m[34mSELECT "trails".* FROM "trails" WHERE "trails"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/trails_controller.rb:8:in `show'
+  Rendering api/trails/show.json.jbuilder
+  Rendered api/trails/show.json.jbuilder (Duration: 0.2ms | Allocations: 303)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 1650)
+
+
+Started GET "/api/trails" for 127.0.0.1 at 2023-03-02 13:21:18 -0800
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:21:18 -0800
+Processing by Api::TrailsController#index as JSON
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  Rendering api/trails/index.json.jbuilder
+  [1m[36mTrail Load (0.4ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ app/views/api/trails/index.json.jbuilder:1
+  [1m[36mPark Load (0.4ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 291)
+Completed 200 OK in 9ms (Views: 0.5ms | ActiveRecord: 4.7ms | Allocations: 8276)
+
+
+  Rendered api/trails/index.json.jbuilder (Duration: 11.3ms | Allocations: 9571)
+Completed 200 OK in 17ms (Views: 3.2ms | ActiveRecord: 8.5ms | Allocations: 12499)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:21:18 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 23ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 1658)
+
+
+Started GET "/api/trails" for 127.0.0.1 at 2023-03-02 13:21:55 -0800
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:21:55 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+Processing by Api::TrailsController#index as JSON
+  Rendering api/trails/index.json.jbuilder
+  [1m[36mPark Load (1.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  [1m[36mTrail Load (0.6ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  Rendered api/parks/show.json.jbuilder (Duration: 0.4ms | Allocations: 210)
+  ↳ app/views/api/trails/index.json.jbuilder:1
+Completed 200 OK in 7ms (Views: 2.0ms | ActiveRecord: 1.2ms | Allocations: 3206)
+
+
+  Rendered api/trails/index.json.jbuilder (Duration: 4.1ms | Allocations: 1887)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.6ms | Allocations: 3156)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:21:55 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.3ms | Allocations: 210)
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.2ms | Allocations: 1550)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-02 13:21:56 -0800
+Started GET "/explore" for 127.0.0.1 at 2023-03-02 13:21:56 -0800
+Processing by Api::SessionsController#show as JSON
+Processing by StaticPagesController#frontend_index as */*
+  Parameters: {"path"=>"explore"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  Rendering public/index.html
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 2.5ms | Allocations: 5092)
+
+
+  Rendered public/index.html (Duration: 0.5ms | Allocations: 699)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms | Allocations: 1754)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:21:56 -0800
+Started GET "/api/trails" for 127.0.0.1 at 2023-03-02 13:21:56 -0800
+Processing by Api::TrailsController#index as JSON
+  Rendering api/trails/index.json.jbuilder
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTrail Load (0.5ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ app/views/api/trails/index.json.jbuilder:1
+  Rendered api/trails/index.json.jbuilder (Duration: 1.7ms | Allocations: 2214)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.5ms | Allocations: 3166)
+
+
+  [1m[36mPark Load (0.8ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 211)
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.8ms | Allocations: 3082)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:21:56 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 1559)
+
+
+Started GET "/api/trails/1" for 127.0.0.1 at 2023-03-02 13:21:58 -0800
+Processing by Api::TrailsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTrail Load (0.3ms)[0m  [1m[34mSELECT "trails".* FROM "trails" WHERE "trails"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/trails_controller.rb:8:in `show'
+  Rendering api/trails/show.json.jbuilder
+  Rendered api/trails/show.json.jbuilder (Duration: 0.6ms | Allocations: 307)
+Completed 200 OK in 5ms (Views: 1.0ms | ActiveRecord: 0.3ms | Allocations: 2537)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:21:59 -0800
+Started GET "/api/trails" for 127.0.0.1 at 2023-03-02 13:21:59 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.4ms | Allocations: 211)
+Completed 200 OK in 3ms (Views: 0.9ms | ActiveRecord: 0.2ms | Allocations: 1566)
+
+
+Processing by Api::TrailsController#index as JSON
+  Rendering api/trails/index.json.jbuilder
+  [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ app/views/api/trails/index.json.jbuilder:1
+  Rendered api/trails/index.json.jbuilder (Duration: 1.6ms | Allocations: 1244)
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.2ms | Allocations: 2107)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:21:59 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.4ms | Allocations: 210)
+Completed 200 OK in 3ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 1535)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:30:49 -0800
+Started GET "/api/trails" for 127.0.0.1 at 2023-03-02 13:30:49 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+Processing by Api::TrailsController#index as JSON
+  Rendering api/trails/index.json.jbuilder
+  [1m[36mTrail Load (6.9ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  [1m[36mPark Load (0.4ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.5ms | Allocations: 210)
+Completed 200 OK in 94ms (Views: 0.8ms | ActiveRecord: 33.8ms | Allocations: 8824)
+
+
+  ↳ app/views/api/trails/index.json.jbuilder:1
+  Rendered api/trails/index.json.jbuilder (Duration: 73.5ms | Allocations: 7104)
+Completed 200 OK in 97ms (Views: 77.7ms | ActiveRecord: 36.1ms | Allocations: 9613)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:30:49 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.4ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 7ms (Views: 0.3ms | ActiveRecord: 0.5ms | Allocations: 1563)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-02 13:30:54 -0800
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+Completed 200 OK in 55ms (Views: 3.1ms | ActiveRecord: 1.0ms | Allocations: 1240)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:30:54 -0800
+Started GET "/api/trails" for 127.0.0.1 at 2023-03-02 13:30:54 -0800
+Started GET "/explore" for 127.0.0.1 at 2023-03-02 13:30:54 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.3ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 212)
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 1639)
+
+
+Processing by Api::TrailsController#index as JSON
+  Rendering api/trails/index.json.jbuilder
+  [1m[36mTrail Load (0.3ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ app/views/api/trails/index.json.jbuilder:1
+  Rendered api/trails/index.json.jbuilder (Duration: 1.3ms | Allocations: 1255)
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.3ms | Allocations: 2150)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:30:54 -0800
+Processing by StaticPagesController#frontend_index as */*
+  Parameters: {"path"=>"explore"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.2ms | Allocations: 65)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 353)
+
+
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.3ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 1565)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:31:07 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 1544)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:31:07 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.4ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 8ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 1544)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-02 13:31:09 -0800
+Started GET "/explore" for 127.0.0.1 at 2023-03-02 13:31:09 -0800
+Processing by Api::SessionsController#show as JSON
+Processing by StaticPagesController#frontend_index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  Parameters: {"path"=>"explore"}
+Completed 200 OK in 6ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1501)
+
+
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.0ms | Allocations: 676)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:31:09 -0800
+Started GET "/api/trails" for 127.0.0.1 at 2023-03-02 13:31:09 -0800
+Processing by Api::TrailsController#index as JSON
+  Rendering api/trails/index.json.jbuilder
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTrail Load (0.3ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ app/views/api/trails/index.json.jbuilder:1
+  Rendered api/trails/index.json.jbuilder (Duration: 4.4ms | Allocations: 2117)
+  [1m[36mPark Load (2.7ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.1ms | Allocations: 210)
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 0.3ms | Allocations: 3052)
+
+
+Completed 200 OK in 5ms (Views: 0.3ms | ActiveRecord: 2.7ms | Allocations: 2675)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:31:09 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.3ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 11ms (Views: 2.2ms | ActiveRecord: 0.3ms | Allocations: 1577)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-02 13:31:10 -0800
+Started GET "/explore" for 127.0.0.1 at 2023-03-02 13:31:10 -0800
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+Completed 200 OK in 6ms (Views: 0.2ms | ActiveRecord: 0.9ms | Allocations: 1243)
+
+
+Processing by StaticPagesController#frontend_index as */*
+  Parameters: {"path"=>"explore"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 0ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 272)
+
+
+Started GET "/api/trails" for 127.0.0.1 at 2023-03-02 13:31:10 -0800
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:31:10 -0800
+Processing by Api::TrailsController#index as JSON
+  Rendering api/trails/index.json.jbuilder
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTrail Load (2.1ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ app/views/api/trails/index.json.jbuilder:1
+  Rendered api/trails/index.json.jbuilder (Duration: 3.2ms | Allocations: 2171)
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 2.1ms | Allocations: 3035)
+
+
+  [1m[36mPark Load (0.7ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.1ms | Allocations: 212)
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.7ms | Allocations: 3043)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:31:10 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.1ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 212)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 1549)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:31:22 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.1ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 1550)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:31:22 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 1554)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-02 13:31:23 -0800
+Started GET "/explore" for 127.0.0.1 at 2023-03-02 13:31:23 -0800
+Processing by Api::SessionsController#show as JSON
+Processing by StaticPagesController#frontend_index as */*
+  Parameters: {"path"=>"explore"}
+  Rendering public/index.html
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1753)
+
+
+  Rendered public/index.html (Duration: 0.4ms | Allocations: 486)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 1178)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:31:23 -0800
+Started GET "/api/trails" for 127.0.0.1 at 2023-03-02 13:31:23 -0800
+Processing by Api::TrailsController#index as JSON
+  Rendering api/trails/index.json.jbuilder
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTrail Load (0.3ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ app/views/api/trails/index.json.jbuilder:1
+  Rendered api/trails/index.json.jbuilder (Duration: 1.8ms | Allocations: 2077)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.3ms | Allocations: 2929)
+
+
+  [1m[36mPark Load (1.0ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.1ms | Allocations: 210)
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 1.0ms | Allocations: 2993)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:31:23 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.3ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 1535)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:31:54 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.4ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.4ms | Allocations: 1536)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:31:54 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.3ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 1536)
+
+
+Started GET "/explore" for 127.0.0.1 at 2023-03-02 13:31:55 -0800
+Started GET "/api/session" for 127.0.0.1 at 2023-03-02 13:31:55 -0800
+Processing by StaticPagesController#frontend_index as */*
+Processing by Api::SessionsController#show as JSON
+  Parameters: {"path"=>"explore"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 1.2ms | Allocations: 6)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 305)
+
+
+  [1m[36mUser Load (19.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+Completed 200 OK in 20ms (Views: 0.1ms | ActiveRecord: 19.2ms | Allocations: 1750)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:31:55 -0800
+Started GET "/api/trails" for 127.0.0.1 at 2023-03-02 13:31:55 -0800
+Processing by Api::ParksController#show as JSON
+Processing by Api::TrailsController#index as JSON
+  Parameters: {"id"=>"1"}
+  Rendering api/trails/index.json.jbuilder
+  [1m[36mPark Load (0.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  [1m[36mTrail Load (0.3ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+  ↳ app/views/api/trails/index.json.jbuilder:1
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.2ms | Allocations: 2085)
+
+
+  Rendered api/trails/index.json.jbuilder (Duration: 3.3ms | Allocations: 1910)
+Completed 200 OK in 16ms (Views: 4.4ms | ActiveRecord: 0.3ms | Allocations: 3825)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:31:55 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 1535)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-02 13:31:56 -0800
+Started GET "/explore" for 127.0.0.1 at 2023-03-02 13:31:56 -0800
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 1219)
+
+
+Processing by StaticPagesController#frontend_index as */*
+  Parameters: {"path"=>"explore"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.0ms | Allocations: 6)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 272)
+
+
+Started GET "/api/trails" for 127.0.0.1 at 2023-03-02 13:31:56 -0800
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:31:56 -0800
+Processing by Api::TrailsController#index as JSON
+  Rendering api/trails/index.json.jbuilder
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  [1m[36mPark Load (0.3ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  ↳ app/views/api/trails/index.json.jbuilder:1
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.1ms | Allocations: 210)
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 2568)
+
+
+  Rendered api/trails/index.json.jbuilder (Duration: 2.0ms | Allocations: 2616)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.2ms | Allocations: 4139)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:31:56 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 1536)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:32:02 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.4ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 1556)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:32:02 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.3ms | Allocations: 210)
+Completed 200 OK in 1ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 1556)
+
+
+Started GET "/explore" for 127.0.0.1 at 2023-03-02 13:32:03 -0800
+Processing by StaticPagesController#frontend_index as */*
+  Parameters: {"path"=>"explore"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 10)
+Started GET "/api/session" for 127.0.0.1 at 2023-03-02 13:32:03 -0800
+Completed 200 OK in 1ms (Views: 0.7ms | ActiveRecord: 0.0ms | Allocations: 289)
+
+
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+Completed 200 OK in 20ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1223)
+
+
+Started GET "/api/trails" for 127.0.0.1 at 2023-03-02 13:32:03 -0800
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:32:03 -0800
+Processing by Api::TrailsController#index as JSON
+  Rendering api/trails/index.json.jbuilder
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.1ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTrail Load (6.5ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  ↳ app/views/api/trails/index.json.jbuilder:1
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/trails/index.json.jbuilder (Duration: 23.2ms | Allocations: 2331)
+  Rendered api/parks/show.json.jbuilder (Duration: 0.4ms | Allocations: 210)
+Completed 200 OK in 44ms (Views: 36.0ms | ActiveRecord: 6.5ms | Allocations: 4104)
+
+
+Completed 200 OK in 24ms (Views: 2.4ms | ActiveRecord: 0.1ms | Allocations: 2615)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:32:03 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 4ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 1547)
+
+
+Started GET "/api/trails" for 127.0.0.1 at 2023-03-02 13:33:46 -0800
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:33:46 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+Processing by Api::TrailsController#index as JSON
+  Rendering api/trails/index.json.jbuilder
+  [1m[36mPark Load (1.3ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  [1m[36mTrail Load (0.9ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ app/views/api/trails/index.json.jbuilder:1
+  Rendered api/parks/show.json.jbuilder (Duration: 0.3ms | Allocations: 210)
+  Rendered api/trails/index.json.jbuilder (Duration: 12.3ms | Allocations: 1855)
+Completed 200 OK in 17ms (Views: 4.8ms | ActiveRecord: 1.3ms | Allocations: 3421)
+
+
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.9ms | Allocations: 2785)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:33:46 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.3ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.3ms | Allocations: 210)
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 1547)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-02 13:41:41 -0800
+Started GET "/parks/1" for 127.0.0.1 at 2023-03-02 13:41:41 -0800
+Processing by Api::SessionsController#show as JSON
+Processing by StaticPagesController#frontend_index as */*
+  Parameters: {"path"=>"parks/1"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.2ms | Allocations: 6)
+Completed 200 OK in 3ms (Views: 2.5ms | Allocations: 269)
+
+
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+Completed 200 OK in 90ms (Views: 0.5ms | ActiveRecord: 39.4ms | Allocations: 4921)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-02 13:41:43 -0800
+Started GET "/explore" for 127.0.0.1 at 2023-03-02 13:41:43 -0800
+Processing by StaticPagesController#frontend_index as */*
+  Parameters: {"path"=>"explore"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.0ms | Allocations: 12)
+Completed 200 OK in 0ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 283)
+
+
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+Completed 200 OK in 1ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 1220)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:41:43 -0800
+Started GET "/api/trails" for 127.0.0.1 at 2023-03-02 13:41:43 -0800
+Processing by Api::TrailsController#index as JSON
+  Rendering api/trails/index.json.jbuilder
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTrail Load (6.3ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ app/views/api/trails/index.json.jbuilder:1
+  Rendered api/trails/index.json.jbuilder (Duration: 8.0ms | Allocations: 3028)
+Completed 200 OK in 10ms (Views: 2.9ms | ActiveRecord: 6.3ms | Allocations: 4178)
+
+
+  [1m[36mPark Load (0.4ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 212)
+Completed 200 OK in 23ms (Views: 0.8ms | ActiveRecord: 14.9ms | Allocations: 5898)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:41:43 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.1ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 212)
+Completed 200 OK in 6ms (Views: 4.8ms | ActiveRecord: 0.1ms | Allocations: 1543)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-02 13:41:47 -0800
+Started GET "/explore" for 127.0.0.1 at 2023-03-02 13:41:47 -0800
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+Processing by StaticPagesController#frontend_index as */*
+  Parameters: {"path"=>"explore"}
+Completed 200 OK in 4ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 1315)
+
+
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 302)
+
+
+Started GET "/api/trails" for 127.0.0.1 at 2023-03-02 13:41:47 -0800
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:41:47 -0800
+Processing by Api::TrailsController#index as JSON
+  Rendering api/trails/index.json.jbuilder
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTrail Load (0.5ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ app/views/api/trails/index.json.jbuilder:1
+  [1m[36mPark Load (0.4ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/trails/index.json.jbuilder (Duration: 6.1ms | Allocations: 1853)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.5ms | Allocations: 3756)
+
+
+  Rendered api/parks/show.json.jbuilder (Duration: 0.1ms | Allocations: 210)
+Completed 200 OK in 8ms (Views: 1.1ms | ActiveRecord: 0.4ms | Allocations: 3017)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:41:47 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 1547)
+
+
+Started GET "/explore" for 127.0.0.1 at 2023-03-02 13:41:56 -0800
+Started GET "/api/session" for 127.0.0.1 at 2023-03-02 13:41:56 -0800
+Processing by StaticPagesController#frontend_index as */*
+  Parameters: {"path"=>"explore"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.8ms | Allocations: 14)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms | Allocations: 289)
+
+
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1244)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:41:56 -0800
+Started GET "/api/trails" for 127.0.0.1 at 2023-03-02 13:41:56 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+Processing by Api::TrailsController#index as JSON
+  Rendering api/trails/index.json.jbuilder
+  [1m[36mPark Load (0.5ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.5ms | Allocations: 2694)
+
+
+  [1m[36mTrail Load (0.4ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ app/views/api/trails/index.json.jbuilder:1
+  Rendered api/trails/index.json.jbuilder (Duration: 3.0ms | Allocations: 2246)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.4ms | Allocations: 3147)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:41:56 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (1.8ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 4ms (Views: 0.3ms | ActiveRecord: 1.8ms | Allocations: 1550)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-02 13:42:42 -0800
+Started GET "/explore" for 127.0.0.1 at 2023-03-02 13:42:42 -0800
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1330)
+
+
+Processing by StaticPagesController#frontend_index as */*
+  Parameters: {"path"=>"explore"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.2ms | Allocations: 6)
+Completed 200 OK in 0ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:42:42 -0800
+Started GET "/api/trails" for 127.0.0.1 at 2023-03-02 13:42:42 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.8ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 0.8ms | Allocations: 1623)
+
+
+Processing by Api::TrailsController#index as JSON
+  Rendering api/trails/index.json.jbuilder
+  [1m[36mTrail Load (0.7ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ app/views/api/trails/index.json.jbuilder:1
+  Rendered api/trails/index.json.jbuilder (Duration: 4.4ms | Allocations: 1052)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.7ms | Allocations: 1955)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:42:42 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.4ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.4ms | Allocations: 1550)
+
+
+Started GET "/explore" for 127.0.0.1 at 2023-03-02 13:42:52 -0800
+Started GET "/api/session" for 127.0.0.1 at 2023-03-02 13:42:52 -0800
+Processing by StaticPagesController#frontend_index as */*
+  Parameters: {"path"=>"explore"}
+  Rendering public/index.html
+Processing by Api::SessionsController#show as JSON
+  Rendered public/index.html (Duration: 6.0ms | Allocations: 730)
+Completed 200 OK in 8ms (Views: 8.0ms | ActiveRecord: 0.0ms | Allocations: 1336)
+
+
+  [1m[36mUser Load (14.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+Completed 200 OK in 23ms (Views: 0.2ms | ActiveRecord: 14.9ms | Allocations: 1555)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:42:52 -0800
+Started GET "/api/trails" for 127.0.0.1 at 2023-03-02 13:42:52 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.3ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 1655)
+
+
+Processing by Api::TrailsController#index as JSON
+  Rendering api/trails/index.json.jbuilder
+  [1m[36mTrail Load (0.5ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ app/views/api/trails/index.json.jbuilder:1
+  Rendered api/trails/index.json.jbuilder (Duration: 2.1ms | Allocations: 1051)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.5ms | Allocations: 2022)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:42:52 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 1547)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-02 13:43:15 -0800
+Started GET "/parks/1" for 127.0.0.1 at 2023-03-02 13:43:15 -0800
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1267)
+
+
+Processing by StaticPagesController#frontend_index as */*
+  Parameters: {"path"=>"parks/1"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.5ms | Allocations: 6)
+Completed 200 OK in 2ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 272)
+
+
+Started GET "/explore" for 127.0.0.1 at 2023-03-02 13:43:19 -0800
+Started GET "/api/session" for 127.0.0.1 at 2023-03-02 13:43:19 -0800
+Processing by StaticPagesController#frontend_index as */*
+  Parameters: {"path"=>"explore"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 12)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms | Allocations: 286)
+
+
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.7ms | Allocations: 1223)
+
+
+Started GET "/api/trails" for 127.0.0.1 at 2023-03-02 13:43:19 -0800
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:43:19 -0800
+Processing by Api::TrailsController#index as JSON
+  Rendering api/trails/index.json.jbuilder
+  [1m[36mTrail Load (0.7ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ app/views/api/trails/index.json.jbuilder:1
+  Rendered api/trails/index.json.jbuilder (Duration: 2.3ms | Allocations: 1174)
+Completed 200 OK in 5ms (Views: 2.0ms | ActiveRecord: 0.7ms | Allocations: 2057)
+
+
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 1562)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:43:19 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 1562)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:44:13 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 1.1ms | Allocations: 210)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.2ms | Allocations: 1556)
+
+
+Started GET "/parks/1" for 127.0.0.1 at 2023-03-02 13:44:15 -0800
+Started GET "/api/session" for 127.0.0.1 at 2023-03-02 13:44:15 -0800
+Processing by Api::SessionsController#show as JSON
+Processing by StaticPagesController#frontend_index as */*
+  Parameters: {"path"=>"parks/1"}
+  Rendering public/index.html
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+  Rendered public/index.html (Duration: 0.3ms | Allocations: 398)
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1746)
+
+
+Completed 200 OK in 1ms (Views: 0.8ms | ActiveRecord: 0.0ms | Allocations: 802)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:44:15 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 1550)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:44:16 -0800
+Started GET "/api/trails" for 127.0.0.1 at 2023-03-02 13:44:16 -0800
+Processing by Api::TrailsController#index as JSON
+  Rendering api/trails/index.json.jbuilder
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTrail Load (4.3ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ app/views/api/trails/index.json.jbuilder:1
+  Rendered api/trails/index.json.jbuilder (Duration: 5.9ms | Allocations: 2210)
+Completed 200 OK in 7ms (Views: 2.1ms | ActiveRecord: 4.3ms | Allocations: 3075)
+
+
+  [1m[36mPark Load (8.8ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 1.2ms | Allocations: 210)
+Completed 200 OK in 13ms (Views: 1.8ms | ActiveRecord: 8.8ms | Allocations: 2995)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:44:16 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.3ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 1547)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-02 13:44:17 -0800
+Started GET "/explore" for 127.0.0.1 at 2023-03-02 13:44:17 -0800
+Processing by Api::SessionsController#show as JSON
+Processing by StaticPagesController#frontend_index as */*
+  Parameters: {"path"=>"explore"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  Rendering public/index.html
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.4ms | Allocations: 1725)
+
+
+  Rendered public/index.html (Duration: 0.8ms | Allocations: 486)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 1179)
+
+
+Started GET "/api/trails" for 127.0.0.1 at 2023-03-02 13:44:17 -0800
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:44:17 -0800
+Processing by Api::TrailsController#index as JSON
+  Rendering api/trails/index.json.jbuilder
+  [1m[36mTrail Load (0.5ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ app/views/api/trails/index.json.jbuilder:1
+  Rendered api/trails/index.json.jbuilder (Duration: 1.6ms | Allocations: 1163)
+Completed 200 OK in 3ms (Views: 1.4ms | ActiveRecord: 0.5ms | Allocations: 2019)
+
+
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (4.1ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 6ms (Views: 0.4ms | ActiveRecord: 4.1ms | Allocations: 1535)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:44:17 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.1ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 212)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 1540)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:44:18 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.5ms | Allocations: 210)
+Completed 200 OK in 3ms (Views: 1.0ms | ActiveRecord: 0.2ms | Allocations: 1548)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:44:29 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 1544)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-02 13:44:30 -0800
+Started GET "/parks/1" for 127.0.0.1 at 2023-03-02 13:44:30 -0800
+Processing by Api::SessionsController#show as JSON
+Processing by StaticPagesController#frontend_index as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 1551)
+
+
+  Parameters: {"path"=>"parks/1"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.2ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 306)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:44:30 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 1550)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:44:31 -0800
+Started GET "/api/trails" for 127.0.0.1 at 2023-03-02 13:44:31 -0800
+Processing by Api::TrailsController#index as JSON
+  Rendering api/trails/index.json.jbuilder
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTrail Load (0.3ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  [1m[36mPark Load (0.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/api/trails/index.json.jbuilder:1
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendered api/trails/index.json.jbuilder (Duration: 4.2ms | Allocations: 2188)
+  Rendering api/parks/show.json.jbuilder
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.3ms | Allocations: 3488)
+
+
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 5ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 3014)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:44:31 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 1548)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-02 13:44:33 -0800
+Started GET "/explore" for 127.0.0.1 at 2023-03-02 13:44:33 -0800
+Processing by StaticPagesController#frontend_index as */*
+  Parameters: {"path"=>"explore"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.2ms | Allocations: 9)
+Completed 200 OK in 1ms (Views: 0.9ms | ActiveRecord: 0.0ms | Allocations: 285)
+
+
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 1217)
+
+
+Started GET "/api/trails" for 127.0.0.1 at 2023-03-02 13:44:33 -0800
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:44:33 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+Processing by Api::TrailsController#index as JSON
+  Rendering api/trails/index.json.jbuilder
+  [1m[36mPark Load (0.4ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  [1m[36mTrail Load (0.3ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  Rendering api/parks/show.json.jbuilder
+  ↳ app/views/api/trails/index.json.jbuilder:1
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.4ms | Allocations: 3737)
+
+
+  Rendered api/trails/index.json.jbuilder (Duration: 1.7ms | Allocations: 1811)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.3ms | Allocations: 3153)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:44:33 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 2ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 1553)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:44:34 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.5ms | Allocations: 210)
+Completed 200 OK in 4ms (Views: 0.9ms | ActiveRecord: 0.2ms | Allocations: 1562)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-02 13:44:35 -0800
+Started GET "/parks/1" for 127.0.0.1 at 2023-03-02 13:44:35 -0800
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+Completed 200 OK in 3ms (Views: 0.1ms | ActiveRecord: 0.5ms | Allocations: 1262)
+
+
+Processing by StaticPagesController#frontend_index as */*
+  Parameters: {"path"=>"parks/1"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 272)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:44:35 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.4ms | Allocations: 210)
+Completed 200 OK in 6ms (Views: 0.9ms | ActiveRecord: 0.2ms | Allocations: 1538)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:45:40 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 1539)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:45:42 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 1550)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:45:50 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 1550)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:46:28 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.4ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.7ms | Allocations: 210)
+Completed 200 OK in 7ms (Views: 2.3ms | ActiveRecord: 0.4ms | Allocations: 1541)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:46:29 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.3ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 1.6ms | Allocations: 210)
+Completed 200 OK in 7ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 1550)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:46:30 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 212)
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.2ms | Allocations: 1552)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:46:38 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 2ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 1553)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-02 13:46:41 -0800
+Started GET "/parks/1" for 127.0.0.1 at 2023-03-02 13:46:41 -0800
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.3ms | Allocations: 1297)
+
+
+Processing by StaticPagesController#frontend_index as */*
+  Parameters: {"path"=>"parks/1"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 272)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:46:41 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.1ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.1ms | Allocations: 1538)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:46:58 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 1.0ms | Allocations: 210)
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 1538)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-02 13:47:00 -0800
+Started GET "/parks/1" for 127.0.0.1 at 2023-03-02 13:47:00 -0800
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1289)
+
+
+Processing by StaticPagesController#frontend_index as */*
+  Parameters: {"path"=>"parks/1"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.2ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.4ms | ActiveRecord: 0.0ms | Allocations: 272)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:47:01 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.5ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.5ms | Allocations: 1553)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:47:02 -0800
+Started GET "/api/trails" for 127.0.0.1 at 2023-03-02 13:47:02 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.3ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.3ms | Allocations: 210)
+Completed 200 OK in 5ms (Views: 0.6ms | ActiveRecord: 0.3ms | Allocations: 1571)
+
+
+Processing by Api::TrailsController#index as JSON
+  Rendering api/trails/index.json.jbuilder
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:47:02 -0800
+  [1m[36mTrail Load (0.4ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ app/views/api/trails/index.json.jbuilder:1
+  Rendered api/trails/index.json.jbuilder (Duration: 1.9ms | Allocations: 1426)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.4ms | Allocations: 2348)
+
+
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 1530)
+
+
+Started GET "/api/trails/1" for 127.0.0.1 at 2023-03-02 13:47:04 -0800
+Processing by Api::TrailsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTrail Load (6.6ms)[0m  [1m[34mSELECT "trails".* FROM "trails" WHERE "trails"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/trails_controller.rb:8:in `show'
+  Rendering api/trails/show.json.jbuilder
+  Rendered api/trails/show.json.jbuilder (Duration: 1.7ms | Allocations: 307)
+Completed 200 OK in 17ms (Views: 3.0ms | ActiveRecord: 6.6ms | Allocations: 1654)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:47:05 -0800
+Started GET "/api/trails" for 127.0.0.1 at 2023-03-02 13:47:05 -0800
+Processing by Api::TrailsController#index as JSON
+  Rendering api/trails/index.json.jbuilder
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTrail Load (2.0ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ app/views/api/trails/index.json.jbuilder:1
+  Rendered api/trails/index.json.jbuilder (Duration: 4.6ms | Allocations: 2055)
+Completed 200 OK in 6ms (Views: 3.1ms | ActiveRecord: 2.0ms | Allocations: 2914)
+
+
+  [1m[36mPark Load (0.3ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.4ms | Allocations: 210)
+Completed 200 OK in 9ms (Views: 0.8ms | ActiveRecord: 0.3ms | Allocations: 3000)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:47:05 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.3ms | Allocations: 210)
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 1538)
+
+
+Started GET "/api/trails/1" for 127.0.0.1 at 2023-03-02 13:47:07 -0800
+Processing by Api::TrailsController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTrail Load (0.8ms)[0m  [1m[34mSELECT "trails".* FROM "trails" WHERE "trails"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/trails_controller.rb:8:in `show'
+  Rendering api/trails/show.json.jbuilder
+  Rendered api/trails/show.json.jbuilder (Duration: 0.6ms | Allocations: 303)
+Completed 200 OK in 7ms (Views: 1.7ms | ActiveRecord: 0.8ms | Allocations: 1655)
+
+
+Started GET "/api/trails" for 127.0.0.1 at 2023-03-02 13:47:08 -0800
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:47:08 -0800
+Processing by Api::TrailsController#index as JSON
+  Rendering api/trails/index.json.jbuilder
+Processing by Api::ParksController#show as JSON
+  [1m[36mTrail Load (1.2ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  Parameters: {"id"=>"1"}
+  ↳ app/views/api/trails/index.json.jbuilder:1
+  Rendered api/trails/index.json.jbuilder (Duration: 6.7ms | Allocations: 2095)
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 1.2ms | Allocations: 3002)
+
+
+  [1m[36mPark Load (1.0ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.5ms | Allocations: 210)
+Completed 200 OK in 6ms (Views: 0.9ms | ActiveRecord: 1.0ms | Allocations: 2535)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:47:08 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.3ms | Allocations: 210)
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.2ms | Allocations: 1557)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:47:09 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.9ms | Allocations: 210)
+Completed 200 OK in 4ms (Views: 1.4ms | ActiveRecord: 0.2ms | Allocations: 1547)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:47:12 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.3ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 1545)
+
+
+Started GET "/parks/1" for 127.0.0.1 at 2023-03-02 13:47:14 -0800
+Started GET "/api/session" for 127.0.0.1 at 2023-03-02 13:47:14 -0800
+Processing by StaticPagesController#frontend_index as */*
+  Parameters: {"path"=>"parks/1"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.7ms | Allocations: 64)
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.0ms | Allocations: 340)
+
+
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 1223)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:47:14 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.1ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 1545)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:47:26 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 1568)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-02 13:47:27 -0800
+Started GET "/parks/1" for 127.0.0.1 at 2023-03-02 13:47:27 -0800
+Processing by StaticPagesController#frontend_index as */*
+  Parameters: {"path"=>"parks/1"}
+  Rendering public/index.html
+Processing by Api::SessionsController#show as JSON
+  Rendered public/index.html (Duration: 0.9ms | Allocations: 307)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms | Allocations: 1280)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+Completed 200 OK in 3ms (Views: 0.2ms | ActiveRecord: 0.2ms | Allocations: 1511)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:47:27 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.3ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 1544)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:47:34 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.3ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 1.3ms | Allocations: 210)
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.3ms | Allocations: 1553)
+
+
+Started GET "/parks/1" for 127.0.0.1 at 2023-03-02 13:47:35 -0800
+Started GET "/api/session" for 127.0.0.1 at 2023-03-02 13:47:35 -0800
+Processing by StaticPagesController#frontend_index as */*
+  Parameters: {"path"=>"parks/1"}
+  Rendering public/index.html
+Processing by Api::SessionsController#show as JSON
+  Rendered public/index.html (Duration: 0.3ms | Allocations: 290)
+Completed 200 OK in 1ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 1276)
+
+
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+Completed 200 OK in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 1512)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:47:35 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.3ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 2ms (Views: 0.4ms | ActiveRecord: 0.3ms | Allocations: 1538)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:48:36 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.5ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 2.8ms | Allocations: 210)
+Completed 200 OK in 11ms (Views: 4.1ms | ActiveRecord: 0.5ms | Allocations: 1535)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:58:18 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.4ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.6ms | Allocations: 210)
+Completed 200 OK in 119ms (Views: 1.1ms | ActiveRecord: 56.2ms | Allocations: 4416)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:58:30 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.4ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 212)
+Completed 200 OK in 3ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 1552)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:58:38 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 8ms (Views: 0.4ms | ActiveRecord: 0.2ms | Allocations: 1544)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-02 13:58:42 -0800
+Processing by Api::SessionsController#show as JSON
+Started GET "/parks/1" for 127.0.0.1 at 2023-03-02 13:58:42 -0800
+Processing by StaticPagesController#frontend_index as */*
+  Parameters: {"path"=>"parks/1"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 3.1ms | Allocations: 6)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 272)
+
+
+  [1m[36mUser Load (8.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+Completed 200 OK in 135ms (Views: 0.8ms | ActiveRecord: 8.1ms | Allocations: 2913)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:58:42 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.3ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.5ms | Allocations: 210)
+Completed 200 OK in 5ms (Views: 1.0ms | ActiveRecord: 0.3ms | Allocations: 1547)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:58:51 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 2.6ms | Allocations: 210)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 1532)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:59:04 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (5.3ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 11ms (Views: 0.4ms | ActiveRecord: 5.3ms | Allocations: 1532)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:59:22 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 1550)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-02 13:59:23 -0800
+Started GET "/parks/1" for 127.0.0.1 at 2023-03-02 13:59:23 -0800
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+Completed 200 OK in 4ms (Views: 0.5ms | ActiveRecord: 0.3ms | Allocations: 1297)
+
+
+Processing by StaticPagesController#frontend_index as */*
+  Parameters: {"path"=>"parks/1"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.2ms | Allocations: 6)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms | Allocations: 272)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:59:23 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.1ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 212)
+Completed 200 OK in 17ms (Views: 1.3ms | ActiveRecord: 0.1ms | Allocations: 1532)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:59:27 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (20.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 2.5ms | Allocations: 212)
+Completed 200 OK in 70ms (Views: 8.7ms | ActiveRecord: 20.2ms | Allocations: 1576)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-02 13:59:28 -0800
+Started GET "/parks/1" for 127.0.0.1 at 2023-03-02 13:59:28 -0800
+Processing by StaticPagesController#frontend_index as */*
+  Parameters: {"path"=>"parks/1"}
+  Rendering public/index.html
+Processing by Api::SessionsController#show as JSON
+  Rendered public/index.html (Duration: 0.8ms | Allocations: 709)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms | Allocations: 1250)
+
+
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+Completed 200 OK in 3ms (Views: 0.5ms | ActiveRecord: 0.5ms | Allocations: 1536)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:59:28 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.1ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 212)
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.1ms | Allocations: 1557)
+
+
+Started GET "/api/session" for 127.0.0.1 at 2023-03-02 13:59:35 -0800
+Started GET "/parks/1" for 127.0.0.1 at 2023-03-02 13:59:35 -0800
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+Completed 200 OK in 4ms (Views: 0.1ms | ActiveRecord: 0.3ms | Allocations: 1245)
+
+
+Processing by StaticPagesController#frontend_index as */*
+  Parameters: {"path"=>"parks/1"}
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.1ms | Allocations: 6)
+Completed 200 OK in 1ms (Views: 0.3ms | ActiveRecord: 0.0ms | Allocations: 273)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 13:59:35 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.4ms | Allocations: 212)
+Completed 200 OK in 5ms (Views: 0.8ms | ActiveRecord: 0.2ms | Allocations: 1554)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (5.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (158.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "trailblazer_development"[0m
+  [1m[35m (78.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "trailblazer_test"[0m
+  [1m[35m (1570.9ms)[0m  [1m[35mCREATE DATABASE "trailblazer_development" ENCODING = 'unicode'[0m
+  [1m[35m (374.8ms)[0m  [1m[35mCREATE DATABASE "trailblazer_test" ENCODING = 'unicode'[0m
+  [1m[35mSQL (9.4ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (5.0ms)[0m  [1m[35mDROP TABLE IF EXISTS "parks" CASCADE[0m
+  [1m[35m (17.5ms)[0m  [1m[35mCREATE TABLE "parks" ("id" bigserial primary key, "name" character varying NOT NULL, "description" character varying NOT NULL, "long" character varying NOT NULL, "lat" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_parks_on_name" ON "parks" ("name")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "trails" CASCADE[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "trails" ("id" bigserial primary key, "park_id" bigint NOT NULL, "name" character varying NOT NULL, "description" character varying NOT NULL, "length" character varying NOT NULL, "elevation" integer NOT NULL, "long" character varying NOT NULL, "lat" character varying NOT NULL, "trail_type" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_trails_on_name" ON "trails" ("name")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying NOT NULL, "firstname" character varying NOT NULL, "lastname" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_session_token" ON "users" ("session_token")[0m
+  [1m[35m (2.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20230301211555)[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20230226193047),
+(20230301210755);
+
+[0m
+  [1m[35m (2.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-03-02 22:48:43.266460"], ["updated_at", "2023-03-02 22:48:43.266460"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "84998f737c962c361682e69bbe1b187826ba1176"], ["created_at", "2023-03-02 22:48:43.278020"], ["updated_at", "2023-03-02 22:48:43.278020"]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[35mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "parks" CASCADE[0m
+  [1m[35m (9.0ms)[0m  [1m[35mCREATE TABLE "parks" ("id" bigserial primary key, "name" character varying NOT NULL, "description" character varying NOT NULL, "long" character varying NOT NULL, "lat" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_parks_on_name" ON "parks" ("name")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "trails" CASCADE[0m
+  [1m[35m (4.9ms)[0m  [1m[35mCREATE TABLE "trails" ("id" bigserial primary key, "park_id" bigint NOT NULL, "name" character varying NOT NULL, "description" character varying NOT NULL, "length" character varying NOT NULL, "elevation" integer NOT NULL, "long" character varying NOT NULL, "lat" character varying NOT NULL, "trail_type" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_trails_on_name" ON "trails" ("name")[0m
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "users" CASCADE[0m
+  [1m[35m (3.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying NOT NULL, "firstname" character varying NOT NULL, "lastname" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (27.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_session_token" ON "users" ("session_token")[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20230301211555)[0m
+  [1m[35m (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20230226193047),
+(20230301210755);
+
+[0m
+  [1m[35m (3.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-03-02 22:48:43.404891"], ["updated_at", "2023-03-02 22:48:43.404891"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Update (0.6ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = $1, "updated_at" = $2 WHERE "ar_internal_metadata"."key" = $3[0m  [["value", "test"], ["updated_at", "2023-03-02 22:48:43.414965"], ["key", "environment"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "schema_sha1"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "schema_sha1"], ["value", "84998f737c962c361682e69bbe1b187826ba1176"], ["created_at", "2023-03-02 22:48:43.421889"], ["updated_at", "2023-03-02 22:48:43.421889"]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/models/user.rb:44:in `block in generate_unique_session_token'
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "demo@user.io"], ["LIMIT", 1]]
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."password_digest" = $1 LIMIT $2[0m  [["password_digest", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mCACHE User Exists? (0.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "firstname", "lastname", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["email", "demo@user.io"], ["firstname", "Jasmine"], ["lastname", "Kobata"], ["password_digest", "[FILTERED]"], ["session_token", "[FILTERED]"], ["created_at", "2023-03-02 22:48:43.743986"], ["updated_at", "2023-03-02 22:48:43.743986"]]
+  [1m[36mPark Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "parks" WHERE "parks"."name" = $1 LIMIT $2[0m  [["name", "Brushy Peak Regional Preserve"], ["LIMIT", 1]]
+  [1m[36mPark Create (0.5ms)[0m  [1m[32mINSERT INTO "parks" ("name", "description", "long", "lat", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["name", "Brushy Peak Regional Preserve"], ["description", "Brushy Peak and the surrounding area has been recognized as sacred by generations of native Californians. It was once home to the Ssaoam people, a tribelet of the Ohlone peoples who lived and traded in the lands surrounding the peak. The park’s open grasslands support a diversity of wildlife, especially ground squirrels and cottontails that are prey for a variety of hawks, and golden eagles. South-facing slopes of the peak host a coastal sage community of plants. Park Hours: Jan 1 – 31: 8am – 5pm; Feb 1 – Mar 12: 8am – 6pm; Mar 13 – Apr 17: 8am – 7pm; Apr 18 – Sep 5: 8am – 8pm; Sep 6 – Nov 5: 8am – 7pm; Nov 6 – Dec 31: 8am -5pm Fees: None"], ["long", "37.747422815254055"], ["lat", "-121.70834166373278"], ["created_at", "2023-03-02 22:48:43.768833"], ["updated_at", "2023-03-02 22:48:43.768833"]]
+  [1m[36mTrail Create (10.2ms)[0m  [1m[32mINSERT INTO "trails" ("park_id", "name", "description", "length", "elevation", "long", "lat", "trail_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["park_id", 1], ["name", "Laughlin Loop Trail"], ["description", "Head out on this 1.9-mile loop trail near Livermore, California. Generally considered a moderately challenging route, it takes an average of 55 min to complete. This is a popular trail for birding, hiking, and mountain biking, but you can still enjoy some solitude during quieter times of day. The best times to visit this trail are April through October. Dogs are welcome, but must be on a leash."], ["length", "1.9"], ["elevation", 357], ["long", "37.747422815254055"], ["lat", "-121.70834166373278"], ["trail_type", "Loop"], ["created_at", "2023-03-02 22:48:43.840016"], ["updated_at", "2023-03-02 22:48:43.840016"]]
+  [1m[36mTrail Create (0.3ms)[0m  [1m[32mINSERT INTO "trails" ("park_id", "name", "description", "length", "elevation", "long", "lat", "trail_type", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["park_id", 1], ["name", "Laughlin, Tamcan, Brushy Peak Loop"], ["description", "Enjoy this 2.0-mile loop trail near Livermore, California. Generally considered an easy route, it takes an average of 54 min to complete. This is a popular trail for birding, hiking, and running, but you can still enjoy some solitude during quieter times of day. The trail is open year-round and is beautiful to visit anytime."], ["length", "2.0"], ["elevation", 324], ["long", "37.747422815254055"], ["lat", "-121.70834166373278"], ["trail_type", "Loop"], ["created_at", "2023-03-02 22:48:43.851818"], ["updated_at", "2023-03-02 22:48:43.851818"]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/api/trails" for 127.0.0.1 at 2023-03-02 14:48:56 -0800
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 14:48:56 -0800
+Processing by Api::TrailsController#index as JSON
+  Rendering api/trails/index.json.jbuilder
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mTrail Load (0.9ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ app/views/api/trails/index.json.jbuilder:1
+  Rendered api/trails/index.json.jbuilder (Duration: 87.4ms | Allocations: 7629)
+Completed 200 OK in 109ms (Views: 94.5ms | ActiveRecord: 15.0ms | Allocations: 8487)
+
+
+  [1m[36mPark Load (1.1ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 64ms (Views: 0.4ms | ActiveRecord: 36.6ms | Allocations: 7763)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 14:48:57 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.4ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 0.4ms | Allocations: 1538)
+
+
+  [1m[36mTrail Load (0.5ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
