@@ -32,7 +32,7 @@ ApplicationRecord.transaction do
       lat: '-121.70834166373278'
     )
 
-    puts "Creating trails..."
+    puts "Creating trail 1..."
     Trail.create!(
       park_id: 1,
       name: "Laughlin Loop Trail",
@@ -44,6 +44,7 @@ ApplicationRecord.transaction do
       trail_type: "Loop"
     )
 
+    puts "Creating trail 2..."
     Trail.create!(
       park_id: 1,
       name: "Laughlin, Tamcan, Brushy Peak Loop",

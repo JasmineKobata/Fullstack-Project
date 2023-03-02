@@ -44,7 +44,6 @@ export const fetchTrail = (trailId) => async (dispatch) => {
 }
 
 const storeTrails = trails => {
-    // console.log(trails, sessionStorage)
     if (trails) {
         let newTrails = {};
         trails.forEach(trail => {

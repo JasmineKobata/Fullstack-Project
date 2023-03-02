@@ -58468,3 +58468,47 @@ Processing by Api::ParksController#show as JSON
 Completed 200 OK in 5ms (Views: 2.8ms | ActiveRecord: 0.2ms | Allocations: 1538)
 
 
+Started GET "/explore" for 127.0.0.1 at 2023-03-02 12:50:21 -0800
+Started GET "/api/session" for 127.0.0.1 at 2023-03-02 12:50:21 -0800
+Processing by StaticPagesController#frontend_index as */*
+  Parameters: {"path"=>"explore"}
+Processing by Api::SessionsController#show as JSON
+  Rendering public/index.html
+  Rendered public/index.html (Duration: 0.2ms | Allocations: 6)
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 0.0ms | Allocations: 979)
+
+
+  [1m[36mUser Load (6.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT $2[0m  [["session_token", "[FILTERED]"], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:26:in `current_user'
+Completed 200 OK in 17ms (Views: 0.1ms | ActiveRecord: 6.2ms | Allocations: 1542)
+
+
+Started GET "/api/trails" for 127.0.0.1 at 2023-03-02 12:50:21 -0800
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 12:50:21 -0800
+Processing by Api::TrailsController#index as JSON
+  Rendering api/trails/index.json.jbuilder
+  [1m[36mTrail Load (0.3ms)[0m  [1m[34mSELECT "trails".* FROM "trails"[0m
+  ↳ app/views/api/trails/index.json.jbuilder:1
+  Rendered api/trails/index.json.jbuilder (Duration: 2.4ms | Allocations: 1162)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 2021)
+
+
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (12.8ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 17ms (Views: 3.2ms | ActiveRecord: 12.8ms | Allocations: 1541)
+
+
+Started GET "/api/parks/1" for 127.0.0.1 at 2023-03-02 12:50:21 -0800
+Processing by Api::ParksController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mPark Load (0.2ms)[0m  [1m[34mSELECT "parks".* FROM "parks" WHERE "parks"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/parks_controller.rb:3:in `show'
+  Rendering api/parks/show.json.jbuilder
+  Rendered api/parks/show.json.jbuilder (Duration: 0.2ms | Allocations: 210)
+Completed 200 OK in 3ms (Views: 0.3ms | ActiveRecord: 0.2ms | Allocations: 1541)
+
+
