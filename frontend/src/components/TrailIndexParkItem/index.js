@@ -6,7 +6,6 @@ import { Link } from "react-router-dom"
 export default function TrailIndexParkItem({parkId}) {
     const dispatch = useDispatch();
     const park = useSelector(getPark(parkId));
-    console.log(park.trails);
 
     useEffect(() => {
         dispatch(fetchPark(parkId))

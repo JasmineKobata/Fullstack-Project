@@ -38,7 +38,8 @@ export default function parksReducer(oldState=initialState, action) {
     let newState = {...oldState};
     switch (action.type) {
         case RECIEVE_PARK:
-            newState[action.park.id] = action.park;
+            if (!newState[action.park.id])
+               newState[action.park.id] = action.park;
             return newState;
         default:
             return oldState;

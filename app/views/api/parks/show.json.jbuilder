@@ -1,1 +1,1 @@
-json.extract! @park, :id, :name, :description, :long, :lat, :created_at, :updated_at
+json.extract! @park, :id, :name, :description, :long, :lat, :trails, :created_at, :updated_at
