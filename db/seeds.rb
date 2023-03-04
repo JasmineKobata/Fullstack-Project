@@ -35,9 +35,11 @@ ApplicationRecord.transaction do
     puts "Creating trail 1..."
     park.trails.create!(
       name: "Laughlin Loop Trail",
+      difficulty: "Moderate",
       description: "Head out on this 1.9-mile loop trail near Livermore, California. Generally considered a moderately challenging route, it takes an average of 55 min to complete. This is a popular trail for birding, hiking, and mountain biking, but you can still enjoy some solitude during quieter times of day. The best times to visit this trail are April through October. Dogs are welcome, but must be on a leash.",
       length: "1.9",
-      elevation: 357,
+      time: '55 min',
+      elevation: '357',
       long: '37.747422815254055',
       lat: '-121.70834166373278',
       trail_type: "Loop"
@@ -46,9 +48,11 @@ ApplicationRecord.transaction do
     puts "Creating trail 2..."
     park.trails.create!(
       name: "Laughlin, Tamcan, Brushy Peak Loop",
+      difficulty: "Easy",
       description: "Enjoy this 2.0-mile loop trail near Livermore, California. Generally considered an easy route, it takes an average of 54 min to complete. This is a popular trail for birding, hiking, and running, but you can still enjoy some solitude during quieter times of day. The trail is open year-round and is beautiful to visit anytime.",
       length: '2.0',
-      elevation: 324,
+      time: '54 min',
+      elevation: '324',
       long: '37.747422815254055',
       lat: '-121.70834166373278',
       trail_type: "Loop"

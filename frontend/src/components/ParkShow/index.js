@@ -4,7 +4,6 @@ import { useParams } from "react-router-dom";
 import { fetchPark, getPark } from "../../store/parks";
 import Navigation from "../Navigation";
 import { Link } from "react-router-dom";
-import { fetchTrails } from "../../store/trails";
 
 export default function ParkShow() {
     const dispatch = useDispatch();
@@ -12,9 +11,12 @@ export default function ParkShow() {
     const park = useSelector(getPark(parkId));
     
     useEffect(() => {
-        // dispatch(fetchTrails())
         dispatch(fetchPark(parkId))
     }, [dispatch, parkId])
+
+    if (!park) {
+        return null;
+    }
 
     return (
         <>

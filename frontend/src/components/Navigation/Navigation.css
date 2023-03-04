@@ -1,11 +1,11 @@
 .home {
     background-image: url('../../resources/Trailblazer.png');
     background-size: cover;
-    background-position: center;
+    /* background-position: 50% -3px; */
     width: 134px;
     line-height: 30px;
-    margin-left: -25px;
-    vertical-align: text-bottom;
+    margin-left: 25px;
+    /* vertical-align: text-bottom; */
 }
 
 .exploreLink {
@@ -26,11 +26,22 @@
     font: 13px Manrope;
     font-weight: 600;
 }
+.navButton:hover {
+    border: 1px solid #dbdad2;
+    background-color: #dbdad2;
+}
+
+.navBackground {
+    border-bottom: 1px solid #dbdad2;
+}
 
 .navTable {
+    height: 60px;
     list-style-type: none;
     font: 13px Manrope;
     font-weight: 600;
+    position: relative;
+    top: 12px;
 }
 
 .navTable a {

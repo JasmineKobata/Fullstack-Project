@@ -27,8 +27,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_01_211555) do
   create_table "trails", force: :cascade do |t|
     t.bigint "park_id", null: false
     t.string "name", null: false
+    t.string "difficulty", null: false
     t.string "description", null: false
     t.string "length", null: false
+    t.string "time", null: false
     t.integer "elevation", null: false
     t.string "long", null: false
     t.string "lat", null: false

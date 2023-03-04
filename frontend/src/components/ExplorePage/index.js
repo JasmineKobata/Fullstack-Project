@@ -6,10 +6,12 @@ import TrailsList from '../TrailIndex';
 export default function ExplorePage() {
     return (
         <>
+            <div className='test'>
             <Navigation/>
-            <h1>Explore Page</h1>
-            <TrailMapWrapper/>
+            
+            {/* <TrailMapWrapper/> */}
             <TrailsList/>
+            </div>
         </>
     )
 }

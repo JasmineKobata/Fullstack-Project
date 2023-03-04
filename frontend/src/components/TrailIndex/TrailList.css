@@ -1,0 +1,49 @@
+.explorePage {
+    background-color: bisque;
+    width: 100vw;
+    height: calc(100vh - 61px);
+}
+
+.trailTable {
+    background-color: white;
+    width: 400px;
+    display: flex;
+    flex-flow: column;
+    height: calc(100vh - 81px);
+    overflow-y: auto;
+    float: left;
+    position: relative;
+    padding-top: 20px;
+}
+
+.trailTable li {
+    padding-left: 25px;
+    
+}
+
+.trail {
+    font: 17px Manrope;
+    font-weight: 600;
+    text-decoration: none;
+    color: #2b3820;
+}
+
+.park {
+    font: 13px Manrope;
+    font-weight: 600;
+    color: #656e5e;
+}
+
+.diff {
+    font: 13px Manrope;
+    color: #2b3820;
+}
+
+.len {
+    font: 13px Manrope;
+    color: #656e5e;
+}
+
+ul {
+    list-style-type: none;
+}

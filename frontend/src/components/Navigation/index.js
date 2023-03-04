@@ -33,7 +33,7 @@ export default function Navigation() {
     }
 
     return (
-        <>
+        <div className='navBackground'>
             <ul className='navTable'>
                 <li>
                     <NavLink className="home" to="/">.</NavLink><br></br>
@@ -45,6 +45,6 @@ export default function Navigation() {
                     <button className="navButton" onClick={handleButton}>{buttonType}</button>
                 </li>
             </ul>
-        </>
+        </div>
     )
 }

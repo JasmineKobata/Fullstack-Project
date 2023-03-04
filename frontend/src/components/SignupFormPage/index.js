@@ -40,8 +40,8 @@ export default function SignupFormPage() {
             <div className="signup">
                 <ul>{errors.map(error => <li key={error}>{error}</li>)}</ul>
                 <div className="signupblock">
-                    <img className='logo' src="logo.png" alt="Logo"/>
-                    <h2>Sign up today to start planning <br/>your next adventure</h2>
+                    <img className='logo' src="logo.png" alt="Logo"/><br></br><br></br><br></br>
+                    <h2>Sign up today to start planning <br/>your next adventure</h2><br></br><br></br>
                     <label className="firstname">
                         <input className="inputText"
                             type="text"

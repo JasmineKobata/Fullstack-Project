@@ -38,7 +38,7 @@ export default function LoginFormPage() {
             <div className="login">
                 <ul>{errors.map(error => <li key={error}>{error}</li>)}</ul>
                 <div className="innerblock">
-                    <h2>Welcome Back.<br/>Log in and start exploring.</h2>
+                    <h2>Welcome Back.<br/>Log in and start exploring.</h2><br></br><br></br>
                     <label className="email">
                         <input className="inputText"
                             type="text"
