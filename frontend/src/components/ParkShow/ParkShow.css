@@ -1,0 +1,71 @@
+.parkPage {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+}
+
+.parkPage h1, .parkPage h3 {
+    font: 33px Manrope;
+    font-weight: 550;
+    text-decoration: none;
+    color: #2b3820;
+}
+
+.parkPage h3 {
+    font: 29px Manrope;
+    font-weight: 550;
+    text-decoration: none;
+    color: #2b3820;
+    padding-top: 7px;
+}
+
+.parkPage p {
+    font: 16px Manrope;
+    text-decoration: none;
+    color: #2b3820;
+    line-height: 150%;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #dbdad2;
+}
+
+.parkPage li {
+    border-bottom: 1px solid #dbdad2;
+}
+
+/* .pictureframeP {
+    background-color: blue;
+    width: 400px;
+} */
+
+.detailsP {
+    margin-left: 15px;
+}
+
+.modules {
+    display: inline-block;
+}
+
+.trailP {
+    font: 20px Manrope;
+    font-weight: 650;
+    text-decoration: none;
+    color: #2b3820;
+    line-height: 45px;
+}
+
+.parkP {
+    font: 13px Manrope;
+    font-weight: 600;
+    color: #656e5e;
+}
+
+.diffP {
+    font: 16.5px Manrope;
+    color: #2b3820;
+    line-height: 30px;
+}
+
+.lenP {
+    font: 16px Manrope;
+    color: #656e5e;
+}

@@ -1,0 +1,14 @@
+.pictureframeP {
+    width: 400px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-top: 24px;
+    margin-bottom: 20px;
+}
+
+.pictureframeP img {
+    max-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}

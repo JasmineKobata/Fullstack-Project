@@ -6,7 +6,7 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-ApplicationRecord.transaction do 
+# ApplicationRecord.transaction do 
     puts "Destroying tables..."
     # Unnecessary if using `rails db:seed:replant`
     User.destroy_all
@@ -33,7 +33,7 @@ ApplicationRecord.transaction do
     )
 
     puts "Creating trail 1..."
-    park.trails.create!(
+    trail1 = park.trails.create!(
       name: "Laughlin Loop Trail",
       difficulty: "Moderate",
       description: "Head out on this 1.9-mile loop trail near Livermore, California. Generally considered a moderately challenging route, it takes an average of 55 min to complete. This is a popular trail for birding, hiking, and mountain biking, but you can still enjoy some solitude during quieter times of day. The best times to visit this trail are April through October. Dogs are welcome, but must be on a leash.",
@@ -46,7 +46,7 @@ ApplicationRecord.transaction do
     )
 
     puts "Creating trail 2..."
-    park.trails.create!(
+    trail2 = park.trails.create!(
       name: "Laughlin, Tamcan, Brushy Peak Loop",
       difficulty: "Easy",
       description: "Enjoy this 2.0-mile loop trail near Livermore, California. Generally considered an easy route, it takes an average of 54 min to complete. This is a popular trail for birding, hiking, and running, but you can still enjoy some solitude during quieter times of day. The trail is open year-round and is beautiful to visit anytime.",
@@ -58,16 +58,30 @@ ApplicationRecord.transaction do
       trail_type: "Loop"
     )
 
-  
-    # More users
-    # 10.times do 
-    #   User.create!({
-    #     firstname: Faker::Internet.unique.username(specifier: 3),
-    #     lastname: Faker::Internet.unique.username(specifier: 3),
-    #     email: Faker::Internet.unique.email,
-    #     password: 'password'
-    #   }) 
-    # end
+    require "open-uri"
+
+    trail1.image.attach(
+      io: URI.open("https://trailblazer-seeds.s3.us-west-1.amazonaws.com/laughlin-loop-1.jpeg"),
+      filename: "laughlin-loop-1.jpeg"
+    )
+
+    (1..4).each do |i|
+      trail1.images.attach(
+        io: URI.open("https://trailblazer-seeds.s3.us-west-1.amazonaws.com/laughlin-loop-#{i}.jpeg"),
+        filename: "laughlin-loop-#{i}.jpeg"
+      )
+    end
+
+    trail2.image.attach(
+      io: URI.open("https://trailblazer-seeds.s3.us-west-1.amazonaws.com/laughlin-tamcan-brushy-1.jpeg"),
+      filename: "laughlin-tamcan-brushy-1.jpeg"
+    )
+    (1..4).each do |i|
+      trail2.images.attach(
+        io: URI.open("https://trailblazer-seeds.s3.us-west-1.amazonaws.com/laughlin-tamcan-brushy-#{i}.jpeg"),
+        filename: "laughlin-loop-#{i}.jpeg"
+      )
+    end
   
     puts "Done!"
-  end
+  # end

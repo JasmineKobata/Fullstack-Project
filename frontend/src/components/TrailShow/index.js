@@ -19,23 +19,32 @@ export default function TrailShow() {
         <>
             <Navigation/>
             <div className='explorePage'>
-            <div className='trailTable'>
-                <h1 className='trailD'>{trail.name}</h1>
-                <p className='diffD'>{trail.difficulty} </p>
-                <Link className='parkD' to={`/parks/${trail.parkId}`}>{trail.park.name}</Link>
-                <div className='detailsD'>
-                    <ul>
-                        <li>Length</li>
-                        <li>Elevation gain</li>
-                        <li>Route type</li>
-                    </ul>
-                    <ul>
-                        <li>{trail.length} mi</li>
-                        <li>{trail.elevation} ft</li>
-                        <li>{trail.trailType}</li>
-                    </ul>
+            <div className='trailShow'>
+                <div className='showpageImage'>
+                    <img key={trail.imageUrl} src={trail.imageUrl} alt="" />
                 </div>
-                <p className="descriptionD">{trail.description}</p>
+                <div className='indented'>
+                    <div className='overlay'>
+                        <div className='phototext'>
+                        <h1 className='trailD'>{trail.name}</h1>
+                        <p className='diffD'>{trail.difficulty} </p>
+                        <Link className='parkD' to={`/parks/${trail.parkId}`}>{trail.park.name}</Link>
+                        </div>
+                    </div>
+                    <div className='detailsD'>
+                        <ul>
+                            <li>Length</li>
+                            <li>Elevation gain</li>
+                            <li>Route type</li>
+                        </ul>
+                        <ul>
+                            <li>{trail.length} mi</li>
+                            <li>{trail.elevation} ft</li>
+                            <li>{trail.trailType}</li>
+                        </ul>
+                    </div>
+                    <p className="descriptionD">{trail.description}</p>
+                </div>
             </div>
             </div>
         </>

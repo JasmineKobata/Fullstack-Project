@@ -1,31 +1,63 @@
-.trailTable li {
-    padding-left: 0px;
+.trailShow {
+    background-color: white;
+    width: 450px;
+    display: flex;
+    flex-flow: column;
+    height: calc(100vh - 61px);
+    overflow-y: auto;
+    float: left;
+    position: relative;
 }
 
-.trailTable {
+.indented {
     padding-left: 25px;
     padding-right: 25px;
+}
+
+.showpageImage {
+    width: 450px;
+    height: 275px;
+    overflow: hidden;
+}
+
+.showpageImage img {
+    max-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    height: 200px;
+    margin-top: -230px;
+    display: flex;
+}
+
+.phototext {
+    align-self: flex-end;
 }
 
 .trailD {
     font: 27px Manrope;
     font-weight: 600;
     text-decoration: none;
-    color: #2b3820;
+    color: white;
 }
 
 .parkD {
     font: 15px Manrope;
     font-weight: 600;
-    color: #656e5e;
+    color: white;
 }
 
 .diffD {
     font: 15px Manrope;
-    color: #2b3820;
+    color: white;
     line-height: 200%;
 }
 
+.detailsD {
+    margin-top: 25px;
+}
 
 .detailsD ul:first-child {
     font: 13px Manrope;
@@ -49,7 +81,7 @@
 }
 
 .descriptionD {
-    font: 17px Manrope;
+    font: 16.5px Manrope;
     color: #2b3820;
-    line-height: 165%;
+    line-height: 175%;
 }

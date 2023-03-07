@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::API
     include ActionController::RequestForgeryProtection
+    include ActiveStorage::SetCurrent
     protect_from_forgery with: :exception
     before_action :snake_case_params, :attach_authenticity_token
     helper_method :current_user, :logged_in?
