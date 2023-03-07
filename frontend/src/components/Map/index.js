@@ -1,21 +1,21 @@
 import { useEffect, useRef } from "react";
 import { Wrapper } from "@googlemaps/react-wrapper";
 
-// export function TrailMap(trails, mapEventHandlers, markerEventHandlers) {
-//     let map = null;
-//     const myLatLng = new google.mapsLatLng(37.705417, -121.793325);
-//     const mapOptions = {
-//         zoom: 4,
-//         center: myLatLng
-//     }
+export function TrailMap(trails, mapEventHandlers, markerEventHandlers) {
+    let map = null;
+    const myLatLng = new google.maps.LatLng(37.705417, -121.793325);
+    const mapOptions = {
+        zoom: 4,
+        center: myLatLng
+    }
 
-//     const mapRef = useRef(null);
+    const mapRef = useRef(null);
 
-//     useEffect(() => {
-//         if (map === null) {
-//             map = new google.maps.Map(mapRef, {mapOptions});
-//         }
-//     })
+    useEffect(() => {
+        if (map === null) {
+            map = new google.maps.Map(mapRef, {mapOptions});
+        }
+    })
 
 //     let markers = {};
 
@@ -30,18 +30,18 @@ import { Wrapper } from "@googlemaps/react-wrapper";
 //         })
 //     })
     
-//     return (
-//         <>
-//             <div ref={mapRef} placeholder="Map"/>
-//         </>
-//     )
-// }
+    return (
+        <>
+            <div ref={mapRef} placeholder="Map"/>
+        </>
+    )
+}
 
 export default function TrailMapWrapper(trails={}, mapHandlers={}, markerHandlers={}) {
     return (
         <Wrapper apiKey={process.env.REACT_APP_MAPS_API_KEY}>
-            {/* <TrailMap trails={trails} mapHandlers={mapHandlers} markerHandlers={mapHandlers}/> */}
-            <div>Map</div>
+            <TrailMap trails={trails} mapHandlers={mapHandlers} markerHandlers={mapHandlers}/>
+            {/* <div>Map</div> */}
         </Wrapper>
     )
 }

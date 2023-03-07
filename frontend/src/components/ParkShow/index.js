@@ -29,10 +29,10 @@ export default function ParkShow() {
                 <h3>Trails</h3>
                 <ul>{Object.values(park.trails).map( trail =>
                     <li key={trail.id}>
-                        <div className="modules">
+                        <div className="modules one">
                             <ParkTrailImage trailId={trail.id}/>
                         </div>
-                        <div className="modules">
+                        <div className="modules two">
                             <br></br>
                             <div className="detailsP">
                                 <div className='diffP'>{trail.difficulty} </div>

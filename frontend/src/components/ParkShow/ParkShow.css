@@ -37,12 +37,17 @@
     width: 400px;
 } */
 
-.detailsP {
-    margin-left: 15px;
-}
-
 .modules {
     display: inline-block;
+}
+
+.modules.two {
+    position: absolute;
+    margin-top: 20px;
+}
+
+.detailsP {
+    margin-left: 15px;
 }
 
 .trailP {
