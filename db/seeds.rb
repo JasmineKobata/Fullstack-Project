@@ -83,6 +83,7 @@
       )
     end
 
+    puts "Create Review..."
     trail1.reviews.create!(
       rating: '5',
       body: "Pretty trails.",
