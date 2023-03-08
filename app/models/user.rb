@@ -7,6 +7,10 @@ class User < ApplicationRecord
   validates :email, length: { in: 3...255 }, format: { with: URI::MailTo::EMAIL_REGEXP }
   validates :password, length: { in: 6...255 }, allow_nil: true
   before_validation :ensure_session_token
+  has_many :reviews,
+    class_name: :Review,
+    foreign_key: :author_id,
+    dependent: :destroy
 
   def self.find_by_credentials(email, password)
     @user = User.find_by(email: email)

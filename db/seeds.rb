@@ -82,6 +82,12 @@
         filename: "laughlin-loop-#{i}.jpeg"
       )
     end
+
+    trail1.reviews.create!(
+      rating: '5',
+      body: "Pretty trails.",
+      author_id: 1
+    )
   
     puts "Done!"
   # end

@@ -2,9 +2,12 @@ import './TrailShow.css'
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux"
 import { useParams } from "react-router-dom";
-import { fetchTrail, fetchTrails, getTrail } from "../../store/trails";
+import { fetchTrail, getTrail } from "../../store/trails";
 import Navigation from '../Navigation';
-import { Link } from "react-router-dom"
+import { Link } from "react-router-dom";
+import TrailMapWrapper from '../Map';
+import ReviewModal from '../ReviewModal';
+import Reviews from '../Reviews';
 
 export default function TrailShow() {
     const dispatch = useDispatch();
@@ -15,37 +18,48 @@ export default function TrailShow() {
         dispatch(fetchTrail(trailId))
     }, [dispatch, trailId])
 
+    function handleMapClick(event) {
+        // const { latLng } = event;
+        // const queryParams = JSON.stringify({
+        //     lat: latLng.toJSON().lat,
+        //     lng: latLng.toJSON().lng
+        // })
+    }
+
     return (
         <>
             <Navigation/>
             <div className='explorePage'>
-            <div className='trailShow'>
-                <div className='showpageImage'>
-                    <img key={trail.imageUrl} src={trail.imageUrl} alt="" />
-                </div>
-                <div className='indented'>
-                    <div className='overlay'>
-                        <div className='phototext'>
-                        <h1 className='trailD'>{trail.name}</h1>
-                        <p className='diffD'>{trail.difficulty} </p>
-                        <Link className='parkD' to={`/parks/${trail.parkId}`}>{trail.park.name}</Link>
+                <div className='trailShow'>
+                    <div className='showpageImage'>
+                        <img key={trail.imageUrl} src={trail.imageUrl} alt="" />
+                    </div>
+                    <div className='indented'>
+                        <div className='overlay'>
+                            <div className='phototext'>
+                            <h1 className='trailD'>{trail.name}</h1>
+                            <p className='diffD'>{trail.difficulty} </p>
+                            <Link className='parkD' to={`/parks/${trail.parkId}`}>{trail.park.name}</Link>
+                            </div>
                         </div>
+                        <div className='detailsD'>
+                            <ul>
+                                <li>Length</li>
+                                <li>Elevation gain</li>
+                                <li>Route type</li>
+                            </ul>
+                            <ul>
+                                <li>{trail.length} mi</li>
+                                <li>{trail.elevation} ft</li>
+                                <li>{trail.trailType}</li>
+                            </ul>
+                        </div>
+                        <p className="descriptionD">{trail.description}</p><br></br>
+                        <ReviewModal trail={trail}/><br></br><br></br>
+                        <Reviews trail={trail}/>
                     </div>
-                    <div className='detailsD'>
-                        <ul>
-                            <li>Length</li>
-                            <li>Elevation gain</li>
-                            <li>Route type</li>
-                        </ul>
-                        <ul>
-                            <li>{trail.length} mi</li>
-                            <li>{trail.elevation} ft</li>
-                            <li>{trail.trailType}</li>
-                        </ul>
-                    </div>
-                    <p className="descriptionD">{trail.description}</p>
                 </div>
-            </div>
+                <TrailMapWrapper mapEventHandlers={{click: handleMapClick}}/>
             </div>
         </>
     )
