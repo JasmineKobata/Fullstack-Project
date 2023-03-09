@@ -16,6 +16,10 @@ export const removeSession = () => {
     }
 }
 
+export const getSession = (store) => {
+    return store.session ? store.session : null
+}
+
 const storeCurrentUser = user => {
     if (user) sessionStorage.setItem("currentUser", JSON.stringify(user));
     else sessionStorage.removeItem("currentUser");

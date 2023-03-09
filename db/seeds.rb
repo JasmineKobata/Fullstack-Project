@@ -24,6 +24,13 @@
       password: 'password'
     )
 
+    User.create!(
+      firstname: 'J', 
+      lastname: 'K',
+      email: 'jk@gmail.com',
+      password: 'password'
+    )
+
     puts "Creating parks..."
     park = Park.create!(
       name: 'Brushy Peak Regional Preserve',
@@ -88,6 +95,12 @@
       rating: '5',
       body: "Pretty trails.",
       author_id: 1
+    )
+
+    trail1.reviews.create!(
+      rating: '3',
+      body: "test1",
+      author_id: 2
     )
   
     puts "Done!"

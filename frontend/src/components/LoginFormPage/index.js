@@ -34,7 +34,7 @@ export default function LoginFormPage() {
     return (
         <>
         <Navigation/>
-        <form onSubmit={handleSubmit}>
+        <form className='loginForm' onSubmit={handleSubmit}>
             <div className="login">
                 <ul>{errors.map(error => <li key={error}>{error}</li>)}</ul>
                 <div className="innerblock">

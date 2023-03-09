@@ -1,4 +1,5 @@
 import csrfFetch from "./csrf";
+import { REMOVE_REVIEW } from "./review";
 
 export const RECIEVE_TRAILS = `trails/RECIEVE_TRAILS`;
 export const RECIEVE_TRAIL = `trails/RECIEVE_TRAIL`;
@@ -76,6 +77,9 @@ export default function trailsReducer(oldState=initialState, action) {
             return newState;
         case RECIEVE_TRAIL:
             newState[action.trail.id] = action.trail;
+            return newState;
+        case REMOVE_REVIEW:
+            console.log(newState, action)
             return newState;
         default:
             return oldState;
