@@ -1,0 +1,22 @@
+.reviews li:not(:last-child) {
+    border-bottom: 1px solid #dbdad2
+}
+
+.reviews li {
+    margin-top: 15px;
+    padding-bottom: 15px;
+}
+
+.author, .body {
+    font: 16px Manrope;
+    color: #2b3820;
+}
+
+.date {
+    font: 12.5px Manrope;
+    color: #656e5e;
+}
+
+.rating {
+    
+}

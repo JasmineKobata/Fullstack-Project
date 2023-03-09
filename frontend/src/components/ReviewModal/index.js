@@ -47,7 +47,7 @@ export default function ReviewModal({trail}) {
     } else {
         return (
             <>
-                <button className='review' onClick={modalHandler}>Write Review</button>
+                <button className='reviewButton' onClick={modalHandler}>Write Review</button>
                 <div className="modal">
                     <form className="modal-content" onSubmit={onSubmit}>
                         <span className="close" onClick={spanHandler}>&times;</span>

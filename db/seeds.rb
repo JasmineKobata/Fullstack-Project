@@ -9,6 +9,9 @@
 # ApplicationRecord.transaction do 
     puts "Destroying tables..."
     # Unnecessary if using `rails db:seed:replant`
+    Review.destroy_all
+    Trail.destroy_all
+    Park.destroy_all
     User.destroy_all
   
     puts "Resetting primary keys..."
@@ -18,15 +21,15 @@
     puts "Creating users..."
     # Create one user with an easy to remember username, email, and password:
     User.create!(
-      firstname: 'Jasmine', 
-      lastname: 'Kobata',
+      firstname: 'Demo', 
+      lastname: 'User',
       email: 'demo@user.io',
       password: 'password'
     )
 
     User.create!(
-      firstname: 'J', 
-      lastname: 'K',
+      firstname: 'Jasmine', 
+      lastname: 'Kobata',
       email: 'jk@gmail.com',
       password: 'password'
     )

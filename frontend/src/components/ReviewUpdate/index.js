@@ -16,7 +16,6 @@ export default function ReviewUpdate({review, trail}) {
             <>
                 <button className='reviewUpdate' onClick={modalHandler}>Edit</button>
                 <ReviewUpdateModal trail={trail} review={review}/>
-                <br></br><br></br>
             </>
         )
     }

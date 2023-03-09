@@ -26,7 +26,7 @@ export default function Navigation() {
                     else if (data) setErrors([data]);
                     else setErrors([res.statusText]);
                 });   
-            window.location = "/"
+            window.location = "/login"
         } else {
             window.location = "/login"
         }

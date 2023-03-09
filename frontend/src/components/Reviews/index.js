@@ -22,12 +22,11 @@ export default function Reviews({ trail }) {
         <ul className='reviews'>
             {Object.values(reviews).map(review =>
                 <li key={review.id}>
-                    <p>Author: {reviews[review.id].author.firstname} {reviews[review.id].author.lastname}</p>
-                    <p>Time: {setDate(review)}</p>
-                    <p>Rating: {review.rating}</p>
-                    <p key={review.id}>{review.body}</p>
+                    <p className='author'>{reviews[review.id].author.firstname} {reviews[review.id].author.lastname}</p>
+                    <p className='date'>{setDate(review)}</p>
+                    <p className='rating'>{review.rating}</p>
+                    <p className='body' key={review.id}>{review.body}</p>
                     <ReviewUpdate review={review} trail={trail}/>
-                    <br></br>
                 </li>
             )}
         </ul>

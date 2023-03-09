@@ -1,3 +1,7 @@
+.reviewButton {
+  width: 400px;
+}
+
 .modal, .updateModal {
     display: none;
     position: fixed;
