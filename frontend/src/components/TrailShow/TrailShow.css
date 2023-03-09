@@ -1,8 +1,8 @@
 .trailShow {
     background-color: white;
     width: 450px;
-    display: flex;
-    flex-flow: column;
+    /* display: flex;
+    flex-flow: column; */
     height: calc(100vh - 61px);
     overflow-y: auto;
     float: left;
@@ -17,13 +17,8 @@
 .showpageImage {
     width: 450px;
     height: 275px;
-    overflow: hidden;
-}
-
-.showpageImage img {
-    max-width: 100%;
-    min-height: 100%;
-    object-fit: cover;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .overlay {

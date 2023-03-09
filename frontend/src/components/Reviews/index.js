@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux'
-import { fetchReviews, getReviews } from '../../store/review';
+import { fetchReviews } from '../../store/review';
 import ReviewUpdate from '../ReviewUpdate';
 import './Reviews.css'
 

@@ -31,15 +31,13 @@ export default function TrailShow() {
             <Navigation/>
             <div className='explorePage'>
                 <div className='trailShow'>
-                    <div className='showpageImage'>
-                        <img key={trail.imageUrl} src={trail.imageUrl} alt="" />
-                    </div>
+                    <div style={{backgroundImage:`url(${trail.imageUrl})`}} className='showpageImage'/>
                     <div className='indented'>
                         <div className='overlay'>
                             <div className='phototext'>
-                            <h1 className='trailD'>{trail.name}</h1>
-                            <p className='diffD'>{trail.difficulty} </p>
-                            <Link className='parkD' to={`/parks/${trail.parkId}`}>{trail.park.name}</Link>
+                                <h1 className='trailD'>{trail.name}</h1>
+                                <p className='diffD'>{trail.difficulty} </p>
+                                <Link className='parkD' to={`/parks/${trail.parkId}`}>{trail.park.name}</Link>
                             </div>
                         </div>
                         <div className='detailsD'>
