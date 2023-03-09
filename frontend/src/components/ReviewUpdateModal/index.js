@@ -7,12 +7,12 @@ import { useSelector } from 'react-redux';
 
 export default function ReviewUpdateModal({trail, review}) {
     const spanHandler = function() {
-        const modal = document.getElementsByClassName("updateModal")[0];
+        const modal = document.getElementsByClassName(`updateModal ${review.id}`)[0];
         modal.style.display = "none";
     }
 
     window.addEventListener("click", function(event) {
-        const modal = document.getElementsByClassName("updateModal")[0];
+        const modal = document.getElementsByClassName(`updateModal ${review.id}`)[0];
         if (event.target == modal) {
             modal.style.display = "none";
         }

@@ -19,11 +19,6 @@ export default function TrailShow() {
     }, [dispatch, trailId])
 
     function handleMapClick(event) {
-        // const { latLng } = event;
-        // const queryParams = JSON.stringify({
-        //     lat: latLng.toJSON().lat,
-        //     lng: latLng.toJSON().lng
-        // })
     }
 
     return (
