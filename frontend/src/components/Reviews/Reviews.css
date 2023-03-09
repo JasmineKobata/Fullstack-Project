@@ -7,6 +7,10 @@
     padding-bottom: 15px;
 }
 
+.reviews p:not(.rating) {
+    line-height: 150%;
+}
+
 .author, .body {
     font: 16px Manrope;
     color: #2b3820;
@@ -15,4 +19,9 @@
 .date {
     font: 12.5px Manrope;
     color: #656e5e;
+}
+
+.rating {
+    font: 15px Manrope;
+    color: #5de371;
 }

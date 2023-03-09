@@ -1,4 +1,11 @@
 .reviewUpdate {
     width: 50px;
     height: 30px;
+    font: 16.5px Manrope;
+    font-weight: 600;
+    color: #2b3820;
+}
+
+.updateButtonContainer {
+    padding-top: 10px;
 }

@@ -2,6 +2,7 @@ import './ReviewUpdate.css'
 import { getSession } from "../../store/session";
 import { useSelector } from "react-redux";
 import ReviewUpdateModal from "../ReviewUpdateModal";
+import {Link} from 'react-router-dom'
 
 export default function ReviewUpdate({review, trail}) {
     const session = useSelector(getSession);
@@ -13,10 +14,10 @@ export default function ReviewUpdate({review, trail}) {
 
     if (session.user && review.authorId === session.user.id) {
         return (
-            <>
-                <button className='reviewUpdate' onClick={modalHandler}>Edit</button>
+            <div className='updateButtonContainer'>
+                <Link className='reviewUpdate' onClick={modalHandler}>Edit</Link>
                 <ReviewUpdateModal trail={trail} review={review}/>
-            </>
+            </div>
         )
     }
 }
