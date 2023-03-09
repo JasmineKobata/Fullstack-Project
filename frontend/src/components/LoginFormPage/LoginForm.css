@@ -16,7 +16,7 @@
     margin: auto;
     padding-top: 50px;
     width: 525px;
-    height: 390px;
+    height: 420px;
     border-radius: 15px;
     background-color: white;
 }
@@ -122,4 +122,9 @@ button:hover {
 .link a {
     color: #2b3820;
     font-weight: 600;
+}
+
+.demoLink {
+    color: #656e5e;
+    font: 14px Manrope;
 }

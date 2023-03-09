@@ -30,14 +30,14 @@ export default function ReviewUpdateModal({trail, review}) {
             rating,
             body
         }
-console.log("submit", review)
+
         await dispatch(updateReview(reviewData))
-        window.location.reload(false)
+        spanHandler()
     }
 
     const onDelete = async () => {
         await dispatch(deleteReview(review.id))
-        window.location.reload(false)
+        spanHandler()
     }
 
     if (!session.user) {

@@ -33,7 +33,8 @@ export default function ReviewModal({trail}) {
             }
 
             await dispatch(createReview(reviewData))
-            window.location.reload(false);
+            // window.location.reload(false);
+            spanHandler();
         }
 
     const modalHandler = function() {

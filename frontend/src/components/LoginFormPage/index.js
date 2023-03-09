@@ -31,6 +31,23 @@ export default function LoginFormPage() {
             });
     }
 
+    const demoLogin = (e) => {
+        e.preventDefault();
+        setErrors([]);
+        return dispatch(sessionActions.login({ email: "demo@user.io", password: "password" }))
+            .catch(async (res) => {
+                let data;
+                try {
+                    data = await res.clone().json();
+                } catch {
+                    data = await res.text();
+                }
+                if (data?.errors) setErrors(data.errors);
+                else if (data) setErrors([data]);
+                else setErrors([res.statusTest]);
+        });
+    }
+
     return (
         <>
         <Navigation/>
@@ -64,7 +81,8 @@ export default function LoginFormPage() {
                     <button type="submit">Log In</button><br></br><br></br>
                     <div className="link">
                         Don't have an account? <Link to='/signup'>Sign up for free</Link>
-                    </div>
+                    </div><br></br>
+                    <Link className="demoLink" onClick={demoLogin}>Log in as demo user</Link>
                 </div>
             </div>
         </form>
