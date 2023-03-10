@@ -74,7 +74,8 @@
 
     trail1.image.attach(
       io: URI.open("https://trailblazer-seeds.s3.us-west-1.amazonaws.com/laughlin-loop-1.jpeg"),
-      filename: "laughlin-loop-1.jpeg"
+      filename: "laughlin-loop-1.jpeg",
+      content_type: 'image.jpeg'
     )
 
     puts "Seed Images 1..."
