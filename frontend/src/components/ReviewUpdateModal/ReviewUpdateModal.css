@@ -13,3 +13,20 @@
 .topline {
     display: inline-flex;
 }
+
+.modal-content label {
+    font: 50px Manrope;
+}
+
+.modal-content label:hover {
+    color: #5de371;
+}
+
+.modal-content input {
+    display: none;
+}
+
+.modal-content input:checked+label {
+    display: inline-block;
+    color: #5de371;
+}

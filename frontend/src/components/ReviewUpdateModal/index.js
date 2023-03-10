@@ -7,12 +7,12 @@ import { useSelector } from 'react-redux';
 
 export default function ReviewUpdateModal({trail, review}) {
     const spanHandler = function() {
-        const modal = document.getElementsByClassName(`updateModal ${review.id}`)[0];
+        const modal = document.getElementsByClassName(`updateModal s${review.id}`)[0];
         modal.style.display = "none";
     }
 
     window.addEventListener("click", function(event) {
-        const modal = document.getElementsByClassName(`updateModal ${review.id}`)[0];
+        const modal = document.getElementsByClassName(`updateModal s${review.id}`)[0];
         if (event.target == modal) {
             modal.style.display = "none";
         }
@@ -45,7 +45,7 @@ export default function ReviewUpdateModal({trail, review}) {
     } else {
         return (
             <>
-                <div className={"updateModal " + review.id}>
+                <div className={"updateModal s" + review.id}>
                     <form className="modal-content" onSubmit={onSubmit}>
                         <div className="topline">
                             <span className="close" onClick={spanHandler}>&times;</span>
@@ -56,27 +56,26 @@ export default function ReviewUpdateModal({trail, review}) {
                         </div>
                         <p className='modalName'>{trail.name}</p>
                         <p className='modalRating'>Rating</p>
-                        <input className="stars" type="radio" id="1" value="1"
+                        <input className="stars" type="radio" id={'1up'+review.id} value="1"
                             onClick={(e) => setRating(e.target.value)}
-                            checked={rating>=1 ? "checked" : ""}
-                            ></input>
-                            <label htmlFor='1'>&#9733;</label>
-                        <input className="stars" type="radio" id="2" value="2"
+                            checked={rating>=1 ? "checked" : ""}></input>
+                            <label htmlFor={'1up'+review.id}>&#9733;&nbsp;</label>
+                        <input className="stars" type="radio" id={'2up'+review.id} value="2"
                             onClick={(e) => setRating(e.target.value)}
                             checked={rating>=2 ? "checked" : ""}></input>
-                            <label htmlFor='2'>&#9733;</label>
-                        <input className="stars" type="radio" id="3" value="3"
+                            <label htmlFor={'2up'+review.id}>&#9733;&nbsp;</label>
+                        <input className="stars" type="radio" id={'3up'+review.id} value="3"
                             onClick={(e) => setRating(e.target.value)}
                             checked={rating>=3 ? "checked" : ""}></input>
-                            <label htmlFor='3'>&#9733;</label>
-                        <input className="stars" type="radio" id="4" value="4"
+                            <label htmlFor={'3up'+review.id}>&#9733;&nbsp;</label>
+                        <input className="stars" type="radio" id={'4up'+review.id} value="4"
                             onClick={(e) => setRating(e.target.value)}
                             checked={rating>=4 ? "checked" : ""}></input>
-                            <label htmlFor='4'>&#9733;</label>
-                        <input className="stars" type="radio" id="5" value="5"
+                            <label htmlFor={'4up'+review.id}>&#9733;&nbsp;</label>
+                        <input className="stars" type="radio" id={'5up'+review.id} value="5"
                             onClick={(e) => setRating(e.target.value)}
                             checked={rating>=5 ? "checked" : ""}></input>
-                            <label htmlFor='5'>&#9733;</label>
+                            <label htmlFor={'5up'+review.id}>&#9733;</label>
                         <br></br><p className='modalBody'>Review</p>
                         <textarea value={body} onChange={(e) => setBody(e.target.value)}>Test text</textarea><br></br>
                         <br></br><button className="updateButton" type="submit">Update</button>
