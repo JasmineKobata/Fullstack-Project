@@ -24,6 +24,10 @@ export default function TrailShow() {
         dispatch(fetchReviews(trail.id))
     }, [dispatch])
 
+    if (!reviews) {
+        return null;
+    }
+
     function handleMapClick(event) {
     }
 
