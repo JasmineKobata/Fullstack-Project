@@ -13,7 +13,7 @@ export default function ReviewUpdateModal({trail, review}) {
 
     window.addEventListener("click", function(event) {
         const modal = document.getElementsByClassName(`updateModal s${review.id}`)[0];
-        if (event.target == modal) {
+        if (event.target === modal) {
             modal.style.display = "none";
         }
     })
