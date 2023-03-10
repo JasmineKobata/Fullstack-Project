@@ -8,17 +8,37 @@ import { Link } from "react-router-dom";
 import TrailMapWrapper from '../Map';
 import ReviewModal from '../ReviewModal';
 import Reviews from '../Reviews';
+import { fetchReviews } from '../../store/review';
 
 export default function TrailShow() {
     const dispatch = useDispatch();
     const {trailId} = useParams();
     const trail = useSelector(getTrail(trailId));
+    const reviews = useSelector(state => state.reviews)
 
     useEffect(() => {
         dispatch(fetchTrail(trailId))
     }, [dispatch, trailId])
 
+    useEffect(() => {
+        dispatch(fetchReviews(trail.id))
+    }, [dispatch])
+
     function handleMapClick(event) {
+    }
+
+    const reviewsSize = Object.values(reviews).length
+
+    function getReviewAvg() {
+        if (reviewsSize === 0) { return 0}
+
+        let num = 0;
+        Object.values(reviews).forEach(review => num += review.rating)
+        return (num / reviewsSize).toFixed(1);
+    }
+
+    function getNumReviews() {
+        return reviewsSize
     }
 
     return (
@@ -31,7 +51,9 @@ export default function TrailShow() {
                         <div className='overlay'>
                             <div className='phototext'>
                                 <h1 className='trailD'>{trail.name}</h1>
-                                <p className='diffD'>{trail.difficulty} </p>
+                                <div className='diffD'>{trail.difficulty}&nbsp; • &nbsp;</div>
+                                <div className='showStar'>&#9733;&nbsp;</div>
+                                <div className='showRevAvg'>{getReviewAvg() + ' (' + getNumReviews() + ')'}</div>
                                 <Link className='parkD' to={`/parks/${trail.parkId}`}>{trail.park.name}</Link>
                             </div>
                         </div>

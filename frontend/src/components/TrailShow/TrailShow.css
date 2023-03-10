@@ -42,12 +42,20 @@
     font: 15px Manrope;
     font-weight: 600;
     color: white;
+    display: block;
 }
 
-.diffD {
+.diffD, .showRevAvg {
     font: 15px Manrope;
     color: white;
     line-height: 200%;
+    display: inline-block;
+}
+
+.showStar {
+    display: inline-block;
+    font: 15px Manrope;
+    color: #5de371;
 }
 
 .detailsD {

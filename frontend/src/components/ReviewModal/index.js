@@ -35,6 +35,8 @@ export default function ReviewModal({trail}) {
             await dispatch(createReview(reviewData))
             // window.location.reload(false);
             spanHandler();
+            setRating("")
+            setBody("")
         }
 
     const modalHandler = function() {
@@ -51,7 +53,8 @@ export default function ReviewModal({trail}) {
                 <div className="modal">
                     <form className="modal-content" onSubmit={onSubmit}>
                         <span className="close" onClick={spanHandler}>&times;</span>
-                        <p>{trail.name}</p>
+                        <p className='modalName'>{trail.name}</p>
+                        <p className="modalRating">Rating</p>
                         <input className="stars" type="radio" value="1"
                             onChange={(e) => setRating(e.target.value)}
                             checked={rating>=1 ? "checked" : ""}></input>
@@ -67,9 +70,9 @@ export default function ReviewModal({trail}) {
                         <input className="stars" type="radio" value="5"
                             onChange={(e) => setRating(e.target.value)}
                             checked={rating>=5 ? "checked" : ""}></input>
-                        <br></br>Review<br></br>
+                        <br></br><p className='modalBody'>Review</p>
                         <textarea placeholder="Give back to the community. Share your thoughts about the trail so others know what to expect." value={body} onChange={(e) => setBody(e.target.value)}></textarea><br></br>
-                        <button type="submit">Post</button>
+                        <br></br><button type="submit">Post</button>
                     </form>
                 </div>
             </>

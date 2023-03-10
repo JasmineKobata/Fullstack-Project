@@ -1,10 +1,15 @@
 .deleteContainer {
     text-align: right;
+    height: 1px;
 }
 
 .deleteButton {
     background-color: #ab251b;
     border-color: #ab251b;
     height: 25px;
-    /* width: 10px; */
+    margin-left: 375px;
+}
+
+.topline {
+    display: inline-flex;
 }

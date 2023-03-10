@@ -25,11 +25,11 @@
     border-radius: 15px;
     width: 500px;
     height: 85vh;
-    max-height: 500px;
+    max-height: 550px;
   }
 
   .close {
-    color: grey;
+    color: #2b3820;
   }
 
 .stars {
@@ -38,11 +38,40 @@
   }
 
 .modal-content textarea {
-    height: 300px;
-    width: 300px;
+    height: 200px;
+    width: 462px;
 }
 
 .modal-content button {
     width: 100px;
     
+}
+
+.modalName {
+    font: 27px Manrope;
+    font-weight: 600;
+    color: #2b3820;
+    padding-top: 25px;
+}
+
+.modalRating, .modalBody {
+  font: 15px Manrope;
+  color: #2b3820;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.modalBody {
+  margin-bottom: 10px;
+}
+
+.modal-content textarea {
+  font: 15px Manrope;
+  color: #2b3820;
+  border-radius: 10px;
+  border: 1px solid #c2c2b8;
+  padding-top: 14px;
+  padding-left: 18px;
+  padding-bottom: 14px;
+  padding-right: 18px;
 }

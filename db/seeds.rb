@@ -87,8 +87,7 @@
 
     trail1.image.attach(
       io: URI.open("https://trailblazer-seeds.s3.us-west-1.amazonaws.com/laughlin-loop-1.jpeg"),
-      filename: "laughlin-loop-1.jpeg",
-      content_type: 'image/jpeg'
+      filename: "laughlin-loop-1.jpeg"
     )
 
     puts "Seed Images 1..."
@@ -100,14 +99,14 @@
       )
     end
 
-    puts "Seed Image 1..."
+    puts "Seed Image 2..."
 
     trail2.image.attach(
       io: URI.open("https://trailblazer-seeds.s3.us-west-1.amazonaws.com/laughlin-tamcan-brushy-1.jpeg"),
       filename: "laughlin-tamcan-brushy-1.jpeg"
     )
 
-    puts "Seed Images 1..."
+    puts "Seed Images 2..."
 
     (1..4).each do |i|
       trail2.images.attach(

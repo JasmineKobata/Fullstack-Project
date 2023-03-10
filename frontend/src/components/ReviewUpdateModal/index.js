@@ -47,12 +47,15 @@ export default function ReviewUpdateModal({trail, review}) {
             <>
                 <div className={"updateModal " + review.id}>
                     <form className="modal-content" onSubmit={onSubmit}>
-                        <span className="close" onClick={spanHandler}>&times;</span>
-                        <div className='deleteContainer'>
-                            <button className="deleteButton" type="button"
-                            onClick={() => onDelete()}>Delete</button>
+                        <div className="topline">
+                            <span className="close" onClick={spanHandler}>&times;</span>
+                            <div className='deleteContainer'>
+                                <button className="deleteButton" type="button"
+                                onClick={() => onDelete()}>Delete</button>
+                            </div>
                         </div>
-                        <p>{trail.name}</p>
+                        <p className='modalName'>{trail.name}</p>
+                        <p className='modalRating'>Rating</p>
                         <input className="stars" type="radio" id="1" value="1"
                             onClick={(e) => setRating(e.target.value)}
                             checked={rating>=1 ? "checked" : ""}
@@ -74,9 +77,9 @@ export default function ReviewUpdateModal({trail, review}) {
                             onClick={(e) => setRating(e.target.value)}
                             checked={rating>=5 ? "checked" : ""}></input>
                             <label htmlFor='5'>&#9733;</label>
-                        <br></br>Review<br></br>
+                        <br></br><p className='modalBody'>Review</p>
                         <textarea value={body} onChange={(e) => setBody(e.target.value)}>Test text</textarea><br></br>
-                        <button className="updateButton" type="submit">Update</button>
+                        <br></br><button className="updateButton" type="submit">Update</button>
                     </form>
                 </div>
             </>
