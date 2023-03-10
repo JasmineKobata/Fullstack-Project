@@ -68,6 +68,19 @@
       trail_type: "Loop"
     )
 
+    puts "Create Review..."
+    trail1.reviews.create!(
+      rating: '5',
+      body: "Pretty trails.",
+      author_id: 1
+    )
+
+    trail1.reviews.create!(
+      rating: '3',
+      body: "test1",
+      author_id: 2
+    )
+
     require "open-uri"
 
     puts "Seed Image 1..."
@@ -75,7 +88,7 @@
     trail1.image.attach(
       io: URI.open("https://trailblazer-seeds.s3.us-west-1.amazonaws.com/laughlin-loop-1.jpeg"),
       filename: "laughlin-loop-1.jpeg",
-      content_type: 'image.jpeg'
+      content_type: 'image/jpeg'
     )
 
     puts "Seed Images 1..."
@@ -102,19 +115,6 @@
         filename: "laughlin-loop-#{i}.jpeg"
       )
     end
-
-    puts "Create Review..."
-    trail1.reviews.create!(
-      rating: '5',
-      body: "Pretty trails.",
-      author_id: 1
-    )
-
-    trail1.reviews.create!(
-      rating: '3',
-      body: "test1",
-      author_id: 2
-    )
   
     puts "Done!"
   # end
