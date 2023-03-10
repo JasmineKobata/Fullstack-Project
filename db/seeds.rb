@@ -70,12 +70,14 @@
 
     require "open-uri"
 
-    puts "Seed Images..."
+    puts "Seed Image 1..."
 
     trail1.image.attach(
       io: URI.open("https://trailblazer-seeds.s3.us-west-1.amazonaws.com/laughlin-loop-1.jpeg"),
       filename: "laughlin-loop-1.jpeg"
     )
+
+    puts "Seed Images 1..."
 
     (1..4).each do |i|
       trail1.images.attach(
@@ -84,10 +86,15 @@
       )
     end
 
+    puts "Seed Image 1..."
+
     trail2.image.attach(
       io: URI.open("https://trailblazer-seeds.s3.us-west-1.amazonaws.com/laughlin-tamcan-brushy-1.jpeg"),
       filename: "laughlin-tamcan-brushy-1.jpeg"
     )
+
+    puts "Seed Images 1..."
+
     (1..4).each do |i|
       trail2.images.attach(
         io: URI.open("https://trailblazer-seeds.s3.us-west-1.amazonaws.com/laughlin-tamcan-brushy-#{i}.jpeg"),
