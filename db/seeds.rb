@@ -42,6 +42,13 @@
       lat: '-121.70834166373278'
     )
 
+    park2 = Park.create!(
+      name: "Los Vaqueros Reservoir and Watershed",
+      description: "Hours: September 7 a.m. to 7 p.m. October 7 a.m. to 6 p.m. Nov. - Feb. 7 a.m. to 5 p.m. March 7 a.m. to 6 p.m. April-August 6 a.m. to 8 p.m.",
+      long: "37.81113167563203",
+      lat: "-121.74927592246908"
+    )
+
     puts "Creating trail 1..."
     trail1 = park.trails.create!(
       name: "Laughlin Loop Trail",
@@ -66,6 +73,54 @@
       long: '37.747422815254055',
       lat: '-121.70834166373278',
       trail_type: "Loop"
+    )
+
+    trail3 = park2.trails.create!(
+      name: "Badger Pass and Oak Savannah Loop Trail",
+      difficulty: "Hard",
+      description: "SHORT TERM CLOSURE: This area is temporarily closed due to storm damage.",
+      length: '8.0',
+      time: '4h 10min',
+      elevation: '1811',
+      long: "37.81113167563203",
+      lat: "-121.74927592246908",
+      trail_type: "Loop"
+    )
+
+    trail4 = park2.trails.create!(
+      name: "Los Vaqueros Dam Trail",
+      difficulty: "Moderate",
+      description: "SHORT TERM CLOSURE: This area is temporarily closed due to storm damage.",
+      length: '2.5',
+      time: '1h 36min',
+      elevation: '823',
+      long: "37.81113167563203",
+      lat: "-121.74927592246908",
+      trail_type: "Loop"
+    )
+
+    trail5 = park2.trails.create!(
+      name: "Los Vaqueros Shoreline Loop Trail",
+      difficulty: "Moderate",
+      description: "SHORT TERM CLOSURE: This area is temporarily closed due to storm damage.",
+      length: '8.9',
+      time: '3h 20min',
+      elevation: '761',
+      long: "37.81113167563203",
+      lat: "-121.74927592246908",
+      trail_type: "Loop"
+    )
+
+    trail6 = park2.trails.create!(
+      name: "Eagle Ridge and Vista Grande",
+      difficulty: "Moderate",
+      description: "True to its name, this is a hike of big vistas and wide-open spaces. The loop runs along two ridgetops with superb views of the rolling, blue oak-sprinkled hills around the reservoir and the endless plain of the Central Valley. You will encounter some cattle guards along this trail. Most of this hike is in the sun, so it is a good idea to bring plenty of water and precautions against the sun. ",
+      length: '5.3',
+      time: '2h 45min',
+      elevation: '1158',
+      long: "37.81113167563203",
+      lat: "-121.74927592246908",
+      trail_type: 'Loop'
     )
 
     puts "Create Review..."
@@ -114,6 +169,42 @@
         filename: "laughlin-loop-#{i}.jpeg"
       )
     end
+
+    trail3.image.attach(
+      io: URI.open("https://trailblazer-seeds.s3.us-west-1.amazonaws.com/badgerpass.jpeg"),
+      filename: "badgerpass.jpeg"
+    )
+    trail3.images.attach(
+      io: URI.open("https://trailblazer-seeds.s3.us-west-1.amazonaws.com/badgerpass.jpeg"),
+      filename: "badgerpass.jpeg"
+    )
+
+    trail4.image.attach(
+      io: URI.open("https://trailblazer-seeds.s3.us-west-1.amazonaws.com/damtrail.jpeg"),
+      filename: "damtrail.jpeg"
+    )
+    trail4.images.attach(
+      io: URI.open("https://trailblazer-seeds.s3.us-west-1.amazonaws.com/damtrail.jpeg"),
+      filename: "damtrail.jpeg"
+    )
+
+    trail5.image.attach(
+      io: URI.open("https://trailblazer-seeds.s3.us-west-1.amazonaws.com/shorelineloop.jpeg"),
+      filename: "shorelineloop.jpeg"
+    )
+    trail5.images.attach(
+      io: URI.open("https://trailblazer-seeds.s3.us-west-1.amazonaws.com/shorelineloop.jpeg"),
+      filename: "shorelineloop.jpeg"
+    )
+
+    trail6.image.attach(
+      io: URI.open("https://trailblazer-seeds.s3.us-west-1.amazonaws.com/eagleridge.jpeg"),
+      filename: "eagleridge.jpeg"
+    )
+    trail6.images.attach(
+      io: URI.open("https://trailblazer-seeds.s3.us-west-1.amazonaws.com/eagleridge.jpeg"),
+      filename: "eagleridge.jpeg"
+    )
   
     puts "Done!"
   # end
