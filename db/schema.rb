@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_08_050110) do
+ActiveRecord::Schema[7.0].define(version: 2023_03_10_020110) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -54,9 +54,9 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_08_050110) do
 
   create_table "reviews", force: :cascade do |t|
     t.integer "rating"
-    t.text "body", null: false
-    t.bigint "author_id", null: false
-    t.bigint "trail_id", null: false
+    t.text "body"
+    t.bigint "author_id"
+    t.bigint "trail_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -64,16 +64,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_08_050110) do
   create_table "trails", force: :cascade do |t|
     t.bigint "park_id", null: false
     t.string "name", null: false
-    t.string "difficulty", null: false
     t.string "description", null: false
     t.string "length", null: false
-    t.string "time", null: false
     t.integer "elevation", null: false
     t.string "long", null: false
     t.string "lat", null: false
     t.string "trail_type", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "difficulty", null: false
+    t.string "time", null: false
     t.index ["name"], name: "index_trails_on_name", unique: true
   end
 
