@@ -1,24 +1,25 @@
-# README
+Background
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a full stack clone of AllTrails. It allows you to view, reviews, like, and comment on hiking trails and nature parks.
 
-Things you may want to cover:
+Technologies
 
-* Ruby version
+- React
+- AWS
+- Rails
+- BCrypt
+- PostgreSQL
 
-* System dependencies
+Features
 
-* Configuration
+- User Auth
 
-* Database creation
+- Parks & Trails
 
-* Database initialization
+- Map
 
-* How to run the test suite
+- Reviews
 
-* Services (job queues, cache servers, search engines, etc.)
+- Search
 
-* Deployment instructions
-
-* ...
+- User Profile
