@@ -74,8 +74,8 @@ export default function TrailShow() {
                             </ul>
                         </div>
                         <p className="descriptionD">{trail.description}</p><br></br>
-                        <ReviewModal trail={trail}/><br></br><br></br>
-                        <Reviews trail={trail}/>
+                        <ReviewModal trail={trail} reviews={reviews}/><br></br><br></br>
+                        <Reviews trail={trail} reviews={reviews}/>
                     </div>
                 </div>
                 <TrailMapWrapper mapEventHandlers={{click: handleMapClick}}/>

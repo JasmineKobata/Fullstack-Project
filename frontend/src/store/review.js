@@ -105,7 +105,6 @@ export default function reviewsReducer(oldState=initialState, action) {
     let newState = {...oldState};
     switch (action.type) {
         case RECIEVE_REVIEWS:
-            console.log(action)
             return action.reviews;
         case RECIEVE_REVIEW:
             newState[action.review.id] = action.review

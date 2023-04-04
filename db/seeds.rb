@@ -30,6 +30,20 @@ require "open-uri"
     )
 
     User.create!(
+      firstname: 'John', 
+      lastname: 'Smith',
+      email: 'js@user.io',
+      password: 'password'
+    )
+
+    User.create!(
+      firstname: 'Jane', 
+      lastname: 'Brown',
+      email: 'jb@user.io',
+      password: 'password'
+    )
+
+    User.create!(
       firstname: 'Jasmine', 
       lastname: 'Kobata',
       email: 'jk@gmail.com',
@@ -129,13 +143,13 @@ require "open-uri"
     trail1.reviews.create!(
       rating: '5',
       body: "Pretty trails.",
-      author_id: 1
+      author_id: 2
     )
 
     trail1.reviews.create!(
       rating: '3',
-      body: "test1",
-      author_id: 2
+      body: "The view is nice, but the hill is very steep.",
+      author_id: 4
     )
 
     puts "Seed Image 1..."

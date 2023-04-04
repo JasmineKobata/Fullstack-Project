@@ -1,5 +1,11 @@
 .reviewButton {
   width: 400px;
+  background-color: #2c5601;
+}
+
+.reviewButton:disabled {
+  background-color: #c2c2b8;
+  border: 1px solid #9f9f95;
 }
 
 .modal, .updateModal {
@@ -44,7 +50,6 @@
 
 .modal-content button {
     width: 100px;
-    
 }
 
 .modalName {

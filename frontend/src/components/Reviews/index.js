@@ -4,13 +4,7 @@ import { fetchReviews } from '../../store/review';
 import ReviewUpdate from '../ReviewUpdate';
 import './Reviews.css'
 
-export default function Reviews({ trail }) {
-    const dispatch = useDispatch();
-    const reviews = useSelector(state => state.reviews);
-
-    useEffect(() => {
-        dispatch(fetchReviews(trail.id))
-    }, [dispatch])
+export default function Reviews({ trail, reviews }) {
 
     function setDate(review) {
         const date = new Date(review.createdAt)

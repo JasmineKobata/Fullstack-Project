@@ -79,7 +79,6 @@ export default function trailsReducer(oldState=initialState, action) {
             newState[action.trail.id] = action.trail;
             return newState;
         case REMOVE_REVIEW:
-            console.log(newState, action)
             return newState;
         default:
             return oldState;
