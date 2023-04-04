@@ -14,7 +14,7 @@ export default function ReviewModal({trail, reviews}) {
 
     window.addEventListener("click", function(event) {
         const modal = document.getElementsByClassName("modal")[0];
-        if (event.target == modal) {
+        if (event.target === modal) {
             modal.style.display = "none";
         }
     })
@@ -50,7 +50,7 @@ export default function ReviewModal({trail, reviews}) {
         const button = document.getElementsByClassName("reviewButton")[0];
         button.disabled = !session.user
             || Object.values(reviews).some(e => e.authorId === session.user.id);
-    }, [reviews])
+    }, [reviews, session.user])
 
     return (
         <>

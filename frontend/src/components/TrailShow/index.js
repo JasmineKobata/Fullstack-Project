@@ -22,7 +22,7 @@ export default function TrailShow() {
 
     useEffect(() => {
         dispatch(fetchReviews(trail.id))
-    }, [dispatch])
+    }, [dispatch, trail.id])
 
     if (!reviews) {
         return null;
