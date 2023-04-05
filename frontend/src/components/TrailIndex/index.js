@@ -2,17 +2,20 @@ import './TrailList.css';
 import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux"
 import { fetchTrails, getTrails } from "../../store/trails";
+import { fetchParks, getParks } from "../../store/parks";
 import { Link } from "react-router-dom";
 import TrailMapWrapper from '../Map';
 
 export default function TrailIndex() {
     const dispatch = useDispatch();
     const trails = useSelector(getTrails);
+    const parks = useSelector(getParks);
     var slideIndex = 1;
     showSlides(slideIndex);
 
     useEffect(() => {
-        dispatch(fetchTrails())
+        dispatch(fetchTrails());
+        dispatch(fetchParks());
     }, [dispatch])
 
     function minusSlides(id) {
@@ -64,7 +67,7 @@ export default function TrailIndex() {
                 )}
                 </ul>
             </div>
-            <TrailMapWrapper mapEventHandlers={{click: handleMapClick}}/>
+            <TrailMapWrapper parks={parks} mapEventHandlers={{click: handleMapClick}}/>
         </div>
     )
 }

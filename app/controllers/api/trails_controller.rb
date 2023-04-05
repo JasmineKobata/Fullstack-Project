@@ -1,5 +1,6 @@
 class Api::TrailsController < ApplicationController
     def index
+        puts "HI2"
         @trails = Trail.all;
         render :index
     end

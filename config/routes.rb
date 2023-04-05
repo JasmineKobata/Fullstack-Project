@@ -13,7 +13,7 @@ Rails.application.routes.draw do
     resources :trails, only: [:index, :show] do
       resources :reviews, only: [:index]
     end
-    resources :parks, only: [:show]
+    resources :parks, only: [:index, :show]
     resources :reviews, only: [:create, :update, :destroy]
     # resources :reviews, only: [:new, :edit]
   end

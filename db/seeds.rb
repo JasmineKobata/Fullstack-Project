@@ -54,15 +54,15 @@ require "open-uri"
     park = Park.create!(
       name: 'Brushy Peak Regional Preserve',
       description: "Brushy Peak and the surrounding area has been recognized as sacred by generations of native Californians. It was once home to the Ssaoam people, a tribelet of the Ohlone peoples who lived and traded in the lands surrounding the peak. The park’s open grasslands support a diversity of wildlife, especially ground squirrels and cottontails that are prey for a variety of hawks, and golden eagles. South-facing slopes of the peak host a coastal sage community of plants. Park Hours: Jan 1 – 31: 8am – 5pm; Feb 1 – Mar 12: 8am – 6pm; Mar 13 – Apr 17: 8am – 7pm; Apr 18 – Sep 5: 8am – 8pm; Sep 6 – Nov 5: 8am – 7pm; Nov 6 – Dec 31: 8am -5pm Fees: None",
-      long: '37.747422815254055',
-      lat: '-121.70834166373278'
+      lat: '37.747422815254055',
+      long: '-121.70834166373278'
     )
 
     park2 = Park.create!(
       name: "Los Vaqueros Reservoir and Watershed",
       description: "Hours: September 7 a.m. to 7 p.m. October 7 a.m. to 6 p.m. Nov. - Feb. 7 a.m. to 5 p.m. March 7 a.m. to 6 p.m. April-August 6 a.m. to 8 p.m.",
-      long: "37.81113167563203",
-      lat: "-121.74927592246908"
+      lat: "37.81113167563203",
+      long: "-121.74927592246908"
     )
 
     puts "Creating trail 1..."
@@ -73,8 +73,8 @@ require "open-uri"
       length: "1.9",
       time: '55 min',
       elevation: '357',
-      long: '37.747422815254055',
-      lat: '-121.70834166373278',
+      lat: '37.747422815254055',
+      long: '-121.70834166373278',
       trail_type: "Loop"
     )
 
@@ -86,8 +86,8 @@ require "open-uri"
       length: '2.0',
       time: '54 min',
       elevation: '324',
-      long: '37.747422815254055',
-      lat: '-121.70834166373278',
+      lat: '37.747422815254055',
+      long: '-121.70834166373278',
       trail_type: "Loop"
     )
 
@@ -98,8 +98,8 @@ require "open-uri"
       length: '8.0',
       time: '4h 10min',
       elevation: '1811',
-      long: "37.81113167563203",
-      lat: "-121.74927592246908",
+      lat: "37.81113167563203",
+      long: "-121.74927592246908",
       trail_type: "Loop"
     )
 
@@ -110,8 +110,8 @@ require "open-uri"
       length: '2.5',
       time: '1h 36min',
       elevation: '823',
-      long: "37.81113167563203",
-      lat: "-121.74927592246908",
+      lat: "37.81113167563203",
+      long: "-121.74927592246908",
       trail_type: "Loop"
     )
 
@@ -122,8 +122,8 @@ require "open-uri"
       length: '8.9',
       time: '3h 20min',
       elevation: '761',
-      long: "37.81113167563203",
-      lat: "-121.74927592246908",
+      lat: "37.81113167563203",
+      long: "-121.74927592246908",
       trail_type: "Loop"
     )
 
@@ -134,8 +134,8 @@ require "open-uri"
       length: '5.3',
       time: '2h 45min',
       elevation: '1158',
-      long: "37.81113167563203",
-      lat: "-121.74927592246908",
+      lat: "37.81113167563203",
+      long: "-121.74927592246908",
       trail_type: 'Loop'
     )
 
