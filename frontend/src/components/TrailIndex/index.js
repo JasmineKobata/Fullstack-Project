@@ -52,11 +52,12 @@ export default function TrailIndex() {
             <div className='trailTable'>
                 <ul>{Object.values(trails).map(trail =>
                     <li key={trail.id}>
-                        <div className='pictureframe' onClick={() => window.location.pathname = `trails/${trail.id}`}>
+                        <div className='pictureframe'>
                             <a className="prev" onClick={() => {minusSlides(trail.id)}}>&#10094;</a>
                             <a className="next" onClick={() => {plusSlides(trail.id)}}>&#10095;</a>
                             {trail.imageUrls.map( imageUrl =>
-                                <img className={`photo ${trail.id}`} key={imageUrl} src={imageUrl} alt=""/>
+                                <img className={`photo ${trail.id}`} key={imageUrl} src={imageUrl} alt=""
+                                onClick={() => window.location.pathname = `trails/${trail.id}`}/>
                             )}                     
                         </div>
                         <div className='diff'>{trail.difficulty} </div>
