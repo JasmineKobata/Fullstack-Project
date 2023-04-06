@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux"
 import { fetchTrails, getTrails } from "../../store/trails";
 import { fetchParks, getParks } from "../../store/parks";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import TrailMapWrapper from '../Map';
 
 export default function TrailIndex() {
@@ -52,11 +52,11 @@ export default function TrailIndex() {
             <div className='trailTable'>
                 <ul>{Object.values(trails).map(trail =>
                     <li key={trail.id}>
-                        <div className='pictureframe'>
+                        <div className='pictureframe' onClick={() => window.location.pathname = `trails/${trail.id}`}>
                             <a className="prev" onClick={() => {minusSlides(trail.id)}}>&#10094;</a>
                             <a className="next" onClick={() => {plusSlides(trail.id)}}>&#10095;</a>
                             {trail.imageUrls.map( imageUrl =>
-                                <img className={`photo ${trail.id}`} key={imageUrl} src={imageUrl} alt="" />
+                                <img className={`photo ${trail.id}`} key={imageUrl} src={imageUrl} alt=""/>
                             )}                     
                         </div>
                         <div className='diff'>{trail.difficulty} </div>

@@ -1,7 +1,10 @@
 import './HomePage.css';
 import Navigation from '../Navigation';
+import { Redirect } from 'react-router-dom';
 
 export default function HomePage() {
+    return <Redirect to="/explore" />
+
 
     return (
         <>
