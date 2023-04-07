@@ -2,7 +2,7 @@ import './Map.css';
 import { useState, useEffect, useRef } from "react";
 import { Wrapper } from "@googlemaps/react-wrapper";
 
-export function TrailMap({parks, trails}, props) {
+export function TrailMap({parks, trail}, props) {
     const [map, setMap] = useState(null);
     const [google, setGoogle] = useState(null);
     const mapRef = useRef(null);
@@ -56,6 +56,32 @@ export function TrailMap({parks, trails}, props) {
             google.maps.event.addListener(map, "click", event => {
                 parkWindow.close();
             });
+        })
+    }
+    if (map && trail) {
+        let myLatLng = new google.maps.LatLng(parseFloat(trail.lat), parseFloat(trail.long));
+        map.center = myLatLng;
+        map.zoom = 14;
+
+        const marker = new google.maps.Marker({
+            position: myLatLng,
+            map,
+            title: trail.name,
+        });
+
+        const parkWindow = new google.maps.InfoWindow({
+            content: marker.title
+        })
+
+        marker.addListener("click", () => {
+            parkWindow.open({
+                anchor: marker,
+                map,
+            });
+        });
+
+        google.maps.event.addListener(map, "click", event => {
+            parkWindow.close();
         })
     }
     

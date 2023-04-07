@@ -94,7 +94,7 @@ export default function TrailIndex() {
                 )}
                 </ul>
             </div>
-            <TrailMapWrapper parks={parks} trails={trails} mapEventHandlers={{click: handleMapClick}}/>
+            <TrailMapWrapper parks={parks} mapEventHandlers={{click: handleMapClick}}/>
         </div>
     )
 }
