@@ -20,6 +20,39 @@
     padding-left: 25px;
 }
 
+.trailTable input[type=search] {
+    width: 400px;
+    height: 35px;
+    border-radius: 20px;
+    /* border-right: 0px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px; */
+    padding-left: 15px;
+    padding-right: 15px;
+    font: 13px Manrope;
+}
+.trailTable input[type=submit] {
+    width: 100px;
+    height: 35px;
+    background-color: #2c5601;
+    border-color: #2c5601;
+    border-left: 0px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding-left: 15px;
+    padding-right: 15px;
+    font: 13px Manrope;
+    color: white;
+}
+.trailTable input[type=submit]:hover {
+    background-color: #2b3820;
+    border-color: #2b3820;
+}
+
 .trailTable .pictureframe {
     width: 400px;
     height: 250px;

@@ -47,11 +47,36 @@ export default function TrailIndex() {
     function handleMapClick(event) {
     }
 
+    const searchInput = document.querySelector("[data-search]")
+    let array = [];
+    if (searchInput) {
+        searchInput.addEventListener("input", e => {
+            const val = e.target.value.toLowerCase();
+            array.forEach(elem => {
+                const isVisible = elem.trail.toLowerCase().includes(val)
+                    || elem.park.toLowerCase().includes(val)
+                const li = document.getElementsByClassName(`li${elem.key}`)[0]
+                li.hidden = !isVisible;
+            })
+            // if (val.split("").length > 0) {
+            //     const dropdown = document.createElement("ul");
+            //     const dropdownBtn = 
+            //     const newContent = 
+            // }
+        })
+    }
+    const handleSearch = () => {
+        // console.log("HI")
+    }
+
     return (
         <div className='explorePage'>
             <div className='trailTable'>
-                <ul>{Object.values(trails).map(trail =>
-                    <li key={trail.id}>
+                <ul><li><input type="search" placeholder='Enter park or trail name' data-search></input>
+                    {/* <input type="submit" value="Search" onClick={() => handleSearch()}></input> */}
+                    </li>
+                    {Object.values(trails).map(trail =>
+                    <li key={trail.id} className={"li"+trail.id.toString()}>
                         <div className='pictureframe'>
                             <a className="prev" onClick={() => {minusSlides(trail.id)}}>&#10094;</a>
                             <a className="next" onClick={() => {plusSlides(trail.id)}}>&#10095;</a>
@@ -64,11 +89,12 @@ export default function TrailIndex() {
                         <Link className='trail' to={`trails/${trail.id}`}>{trail.name}</Link><br></br>
                         <Link className='park' to={`parks/${trail.parkId}`}>{trail.park.name}</Link><br></br>
                         <div className='len'>Length: {trail.length} mi • Est. {trail.time}</div><br></br>
+                        <div hidden>{array.push({trail: trail.name, park: trail.park.name, key: trail.id})}</div>
                     </li>
                 )}
                 </ul>
             </div>
-            <TrailMapWrapper parks={parks} mapEventHandlers={{click: handleMapClick}}/>
+            <TrailMapWrapper parks={parks} trails={trails} mapEventHandlers={{click: handleMapClick}}/>
         </div>
     )
 }

@@ -2,7 +2,7 @@ import './Map.css';
 import { useState, useEffect, useRef } from "react";
 import { Wrapper } from "@googlemaps/react-wrapper";
 
-export function TrailMap({parks}, props) {
+export function TrailMap({parks, trails}, props) {
     const [map, setMap] = useState(null);
     const [google, setGoogle] = useState(null);
     const mapRef = useRef(null);
