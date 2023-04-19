@@ -23,10 +23,15 @@ export default function LoginFormPage() {
                 try {
                     data = await res.clone().json();
                 } catch {
-                    data = await res.text();
+                    try {
+                        data = await res.text();
+                    } catch {
+                        data = await res;
+                    }
                 }
+                
                 if (data?.errors) setErrors(data.errors);
-                else if (data) setErrors([data]);
+                else if (data) setErrors([data.toString()]);
                 else setErrors([res.statusTest]);
             });
     }
@@ -82,7 +87,7 @@ export default function LoginFormPage() {
                     <div className="link">
                         Don't have an account? <Link to='/signup'>Sign up for free</Link>
                     </div><br></br>
-                    <Link className="demoLink" onClick={demoLogin}>Log in as demo user</Link>
+                    <Link to='/' className="demoLink" onClick={demoLogin}>Log in as demo user</Link>
                 </div>
             </div>
         </form>

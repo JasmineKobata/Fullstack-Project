@@ -33,19 +33,27 @@ export const signup = (user) => async (dispatch) => {
 
     if (response.ok) {
         const data = await response.json();
+        if (data.errors) {
+            throw new Error(data.errors);
+        }
+
         storeCurrentUser(data.user)
         dispatch(setSession(data));
     }
 }
 
-export const login = (session) => async (dispatch) => {
+export const login = (credentials) => async (dispatch) => {
     const response = await csrfFetch(`/api/session`, {
         method: 'POST',
-        body: JSON.stringify(session),
+        body: JSON.stringify(credentials),
     });
 
     if (response.ok) {
         const session = await response.json();
+        if (session.errors) {
+            throw new Error(session.errors);
+        }
+        // console.log(session)
         storeCurrentUser(session.user);
         dispatch(setSession(session))
     }
