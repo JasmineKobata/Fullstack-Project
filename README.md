@@ -22,13 +22,13 @@ This is a full stack clone of AllTrails. It allows you to view, reviews, like, a
   - Users can post, edit, and delete reviews on trails
   - Reviews consist of a star rating and a comment
 
-<h3>Future Implementation</h3>
-
-- Map
+ - Map
   - Trail and Park locations will display on map
 
 - Search
   - Users can search for a specific trail or park
+
+<h3>Future Implementation</h3>
 
 - User Profile
   - Users can view, edit, and delete their profiles

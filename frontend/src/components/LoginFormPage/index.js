@@ -24,7 +24,7 @@ export default function LoginFormPage() {
                     data = await res.clone().json();
                 } catch {
                     try {
-                        data = await res.text();
+                       data = await res.text();
                     } catch {
                         data = await res;
                     }
