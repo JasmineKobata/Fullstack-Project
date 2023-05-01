@@ -22,7 +22,7 @@ This is a full stack clone of AllTrails. It allows you to view, reviews, like, a
   - Users can post, edit, and delete reviews on trails
   - Reviews consist of a star rating and a comment
 
- - Map
+- Map
   - Trail and Park locations will display on map
 
 - Search
