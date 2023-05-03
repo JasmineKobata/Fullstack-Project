@@ -25,7 +25,7 @@ This is a full stack clone of AllTrails. It allows you to view, reviews, like, a
 - Reviews
   - Users can post, edit, and delete reviews on trails
   - Reviews consist of a star rating and a comment
-  <img src="./explorepage.png"></img>
+  <img src="./review.png" width="400px"></img>
 
 - Map
   - Trail and Park locations will display on map
