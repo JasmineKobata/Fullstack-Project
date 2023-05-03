@@ -1,3 +1,4 @@
+<h1>Trailblazer</h1>
 <h3>Background</h3>
 
 This is a full stack clone of AllTrails. It allows you to view, reviews, like, and comment on hiking trails and nature parks.
