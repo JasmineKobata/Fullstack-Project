@@ -19,12 +19,12 @@ This is a full stack clone of AllTrails. It allows you to view, reviews, like, a
   - Users can log in and log out securely
 
 - Parks & Trails
-  - Users can view trails index, trails show page, and parks show page
+  - Users can view trails index, trails show page, and parks show page\
 <img src="./explorepage.png"></img>
 
 - Reviews
   - Users can post, edit, and delete reviews on trails
-  - Reviews consist of a star rating and a comment
+  - Reviews consist of a star rating and a comment\
 <img src="./review.png" width="400px"></img>
 
 - Map
