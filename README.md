@@ -3,6 +3,7 @@
 <h3>Background</h3>
 
 This is a full stack clone of AllTrails. It allows you to view, reviews, like, and comment on hiking trails and nature parks.
+<a href="https://mysite-fnk5.onrender.com/">Click here to view!</a>
 
 <h3>Technologies</h3>
 
@@ -19,10 +20,12 @@ This is a full stack clone of AllTrails. It allows you to view, reviews, like, a
 
 - Parks & Trails
   - Users can view trails index, trails show page, and parks show page
+ <img src="./explorepage.png"></img>
 
 - Reviews
   - Users can post, edit, and delete reviews on trails
   - Reviews consist of a star rating and a comment
+  <img src="./explorepage.png"></img>
 
 - Map
   - Trail and Park locations will display on map
