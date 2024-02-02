@@ -154,7 +154,9 @@ require "open-uri"
 
     puts "Seed Image 1..."
 
+    # filestr = URI.parse("https://trailblazer-seeds.s3.us-west-1.amazonaws.com/laughlin-loop-1.jpeg").to_s
     trail1.image.attach(
+      # io: URI.open(filestr),
       io: URI.open("https://trailblazer-seeds.s3.us-west-1.amazonaws.com/laughlin-loop-1.jpeg"),
       filename: "laughlin-loop-1.jpeg"
     )
