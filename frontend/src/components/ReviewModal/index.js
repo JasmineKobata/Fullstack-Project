@@ -23,6 +23,7 @@ export default function ReviewModal({trail, reviews}) {
     const session = useSelector(getSession);
     const [rating, setRating] = useState('');
     const [body, setBody] = useState('');
+    const reviewButtonText = session.user ? "Write Review" : "Log In to Review";
     let onSubmit = async (e) => {
         e.preventDefault();
         const reviewData = {
@@ -54,7 +55,7 @@ export default function ReviewModal({trail, reviews}) {
 
     return (
         <>
-            <button className='reviewButton' onClick={modalHandler}>Write Review</button>
+            <button className='reviewButton' onClick={modalHandler}>{reviewButtonText}</button>
             <div className="modal">
                 <form className="modal-content" onSubmit={onSubmit}>
                     <span className="close" onClick={spanHandler}>&times;</span>
